@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Material (2.12.3):
+    - Material/Core (= 2.12.3)
+  - Material/Core (2.12.3):
+    - Motion (~> 1.2.0)
+  - Motion (1.2.2):
+    - Motion/Core (= 1.2.2)
+  - Motion/Core (1.2.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Material (~> 2.12)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Material: f3421faf6afa25ee3d506a6bf811b34b1d6de83b
+  Motion: 532cc6bb5d6777c58a20f71c26c5825173017f60
+
+PODFILE CHECKSUM: 053580b9f3184a9262bfb2319e9099c6739deb83
+
+COCOAPODS: 1.2.1
