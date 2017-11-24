@@ -182,9 +182,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-af-SeN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-af-SeN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="141" id="K74-9j-A4A" customClass="NotificationTableViewCell" customModule="SmartShopping" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K74-9j-A4A" id="dOf-uh-UZh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-Tg-sb3">
+                                                    <rect key="frame" x="66" y="8" width="253" height="124.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn points for all your shopping at H &amp; M Club." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S33-Uy-iIH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="37.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-SI-H10">
+                                                            <rect key="frame" x="0.0" y="37.5" width="253" height="87"/>
+                                                            <string key="text">The points on your purchases on hm.com are automatically recorded when you make your order. Collect points for your shopping at H &amp; M stores by displaying your H &amp; M Club card at checkout.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="BqG-9l-4hU"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="OH7-hc-fdv"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-s8-bma" customClass="FlatButton" customModule="Material">
+                                                    <rect key="frame" x="8" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="mLa-9Z-QJw"/>
+                                                        <constraint firstAttribute="width" constant="50" id="wy9-q2-6Cd"/>
+                                                    </constraints>
+                                                    <state key="normal" image="h-m-logo.png"/>
+                                                    <connections>
+                                                        <action selector="didTapBTNCheck:" destination="K74-9j-A4A" eventType="touchUpInside" id="ECB-c6-vm5"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u2-Nm-Tqd" customClass="FlatButton" customModule="Material">
+                                                    <rect key="frame" x="327" y="15" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="5vc-ZX-Ulr"/>
+                                                        <constraint firstAttribute="width" constant="40" id="pbo-aI-iTO"/>
+                                                    </constraints>
+                                                    <state key="normal" image="cm_check_white"/>
+                                                    <connections>
+                                                        <action selector="didTapBTNThumb:" destination="K74-9j-A4A" eventType="touchUpInside" id="lDZ-2X-ncJ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="trailing" secondItem="dOf-uh-UZh" secondAttribute="trailingMargin" id="BHt-BO-3bZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="PM5-Tg-sb3" secondAttribute="bottom" constant="8" id="F0x-ID-YRX"/>
+                                                <constraint firstItem="PM5-Tg-sb3" firstAttribute="leading" secondItem="A4p-s8-bma" secondAttribute="trailing" constant="8" id="OYb-8Q-NV0"/>
+                                                <constraint firstItem="A4p-s8-bma" firstAttribute="leading" secondItem="dOf-uh-UZh" secondAttribute="leadingMargin" id="Opb-TG-knA"/>
+                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="leading" secondItem="PM5-Tg-sb3" secondAttribute="trailing" constant="8" id="RZJ-eB-vzT"/>
+                                                <constraint firstItem="A4p-s8-bma" firstAttribute="top" secondItem="dOf-uh-UZh" secondAttribute="topMargin" constant="2" id="jWJ-n9-IKo"/>
+                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="centerY" secondItem="A4p-s8-bma" secondAttribute="centerY" id="pPk-rJ-pKP"/>
+                                                <constraint firstItem="PM5-Tg-sb3" firstAttribute="top" secondItem="dOf-uh-UZh" secondAttribute="top" constant="8" id="wY0-TZ-MSe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnCheck" destination="3u2-Nm-Tqd" id="mYh-Tm-Peo"/>
+                                            <outlet property="btnThumb" destination="A4p-s8-bma" id="fp9-Vx-d1O"/>
+                                            <outlet property="lblDescription" destination="RnS-SI-H10" id="S6t-Ue-yLy"/>
+                                            <outlet property="lblTitle" destination="S33-Uy-iIH" id="0Iy-tj-QjK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SF0-op-Lqd" id="nvY-la-hg9"/>
+                                    <outlet property="delegate" destination="SF0-op-Lqd" id="126-Da-Okx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIA-Ih-9De" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="1442"/>
+            <point key="canvasLocation" x="584.79999999999995" y="1441.529235382309"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4K0-gr-JLa">
@@ -341,8 +418,10 @@
     </scenes>
     <resources>
         <image name="HM.png" width="1358" height="618"/>
+        <image name="cm_check_white" width="24" height="24"/>
         <image name="cm_menu_white" width="24" height="24"/>
         <image name="cm_share_white" width="24" height="24"/>
+        <image name="h-m-logo.png" width="310" height="235"/>
         <image name="ic_close_white" width="24" height="24"/>
         <image name="ic_favorite_white" width="24" height="24"/>
         <image name="ic_place_white" width="24" height="24"/>
