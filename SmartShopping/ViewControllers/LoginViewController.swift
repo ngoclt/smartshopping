@@ -15,18 +15,18 @@ class LoginViewController: BaseViewController {
         didSet {
             tfEmail.clearButtonMode = .whileEditing
             tfEmail.isClearIconButtonEnabled = true
-            tfEmail.placeholderActiveColor = Color.white
-            tfEmail.dividerActiveColor = Color.white
-            tfEmail.textColor = Color.white
+            tfEmail.placeholderActiveColor = Color.darkGray
+            tfEmail.dividerActiveColor = Color.darkGray
+            tfEmail.textColor = Color.darkGray
         }
     }
     @IBOutlet fileprivate var tfPassword: TextField! {
         didSet {
             tfPassword.clearButtonMode = .whileEditing
             tfPassword.isVisibilityIconButtonEnabled = true
-            tfPassword.placeholderActiveColor = Color.white
-            tfPassword.dividerActiveColor = Color.white
-            tfPassword.textColor = Color.white
+            tfPassword.placeholderActiveColor = Color.darkGray
+            tfPassword.dividerActiveColor = Color.darkGray
+            tfPassword.textColor = Color.darkGray
             
             // Setting the visibilityIconButton color.
             tfPassword.visibilityIconButton?.tintColor = Color.lightGreen.base
@@ -48,7 +48,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        view.backgroundColor = Color.teal.base
+        view.backgroundColor = Color.lime.lighten5
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,6 +86,7 @@ extension LoginViewController: TextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         (textField as? ErrorTextField)?.isErrorRevealed = true
+
         return true
     }
 }

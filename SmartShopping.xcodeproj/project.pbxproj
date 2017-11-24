@@ -20,8 +20,13 @@
 		4C7DB4541FC877DB006D0810 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */; };
 		4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */; };
 		4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */; };
-		4C7DB45E1FC88AEC006D0810 /* HM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB45D1FC888B8006D0810 /* HM.png */; };
-		4C7DB4601FC89BB0006D0810 /* h-m-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB45F1FC89BAC006D0810 /* h-m-logo.png */; };
+		4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */; };
+		4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */; };
+		4C7DB46A1FC8BA62006D0810 /* meditation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4651FC8B8B4006D0810 /* meditation.jpg */; };
+		4C7DB46B1FC8BA62006D0810 /* surf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4661FC8B8C0006D0810 /* surf.jpg */; };
+		4C7DB46C1FC8BA62006D0810 /* yoga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4671FC8B8D6006D0810 /* yoga.jpg */; };
+		4C7DB46D1FC8BA62006D0810 /* h-m-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */; };
+		4C7DB46E1FC8BA62006D0810 /* HM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4691FC8B8FB006D0810 /* HM.png */; };
 		5BD03FC63044812AACFB1DDB /* Pods_SmartShoppingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */; };
 		E1C4A89AA3BB273EE4B67B7D /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */; };
 		E45D0CADE985290602192B78 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */; };
@@ -68,8 +73,13 @@
 		4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
-		4C7DB45D1FC888B8006D0810 /* HM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HM.png; path = ../../../../Desktop/HM.png; sourceTree = "<group>"; };
-		4C7DB45F1FC89BAC006D0810 /* h-m-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "h-m-logo.png"; path = "../../../../Downloads/h-m-logo.png"; sourceTree = "<group>"; };
+		4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
+		4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C7DB4651FC8B8B4006D0810 /* meditation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meditation.jpg; sourceTree = "<group>"; };
+		4C7DB4661FC8B8C0006D0810 /* surf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = surf.jpg; sourceTree = "<group>"; };
+		4C7DB4671FC8B8D6006D0810 /* yoga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoga.jpg; sourceTree = "<group>"; };
+		4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h-m-logo.png"; sourceTree = "<group>"; };
+		4C7DB4691FC8B8FB006D0810 /* HM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HM.png; sourceTree = "<group>"; };
 		59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.debug.xcconfig"; sourceTree = "<group>"; };
 		885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +177,7 @@
 				4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */,
 				4C0D6A561FC809B200E25DFD /* LoginViewController.swift */,
 				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
+				4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 				4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */,
 				4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */,
 				4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */,
+				4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,8 +196,11 @@
 		4C7DB45C1FC8889C006D0810 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				4C7DB45F1FC89BAC006D0810 /* h-m-logo.png */,
-				4C7DB45D1FC888B8006D0810 /* HM.png */,
+				4C7DB4651FC8B8B4006D0810 /* meditation.jpg */,
+				4C7DB4661FC8B8C0006D0810 /* surf.jpg */,
+				4C7DB4671FC8B8D6006D0810 /* yoga.jpg */,
+				4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */,
+				4C7DB4691FC8B8FB006D0810 /* HM.png */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -330,10 +345,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0D6A331FC8090400E25DFD /* LaunchScreen.storyboard in Resources */,
-				4C7DB4601FC89BB0006D0810 /* h-m-logo.png in Resources */,
+				4C7DB46C1FC8BA62006D0810 /* yoga.jpg in Resources */,
+				4C7DB46B1FC8BA62006D0810 /* surf.jpg in Resources */,
 				4C0D6A301FC8090400E25DFD /* Assets.xcassets in Resources */,
-				4C7DB45E1FC88AEC006D0810 /* HM.png in Resources */,
 				4C0D6A2E1FC8090400E25DFD /* Main.storyboard in Resources */,
+				4C7DB46A1FC8BA62006D0810 /* meditation.jpg in Resources */,
+				4C7DB46E1FC8BA62006D0810 /* HM.png in Resources */,
+				4C7DB46D1FC8BA62006D0810 /* h-m-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +521,8 @@
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
 				4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */,
 				4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */,
+				4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */,
+				4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */,
 				4C7DB4541FC877DB006D0810 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
