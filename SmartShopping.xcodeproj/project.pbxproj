@@ -120,11 +120,8 @@
 		4C0D6A271FC8090400E25DFD /* SmartShopping */ = {
 			isa = PBXGroup;
 			children = (
+				4C0D6A5C1FC81A2B00E25DFD /* ViewControllers */,
 				4C0D6A281FC8090400E25DFD /* AppDelegate.swift */,
-				4C0D6A581FC809D000E25DFD /* BaseViewController.swift */,
-				4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */,
-				4C0D6A561FC809B200E25DFD /* LoginViewController.swift */,
-				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
 				4C0D6A2C1FC8090400E25DFD /* Main.storyboard */,
 				4C0D6A2F1FC8090400E25DFD /* Assets.xcassets */,
 				4C0D6A311FC8090400E25DFD /* LaunchScreen.storyboard */,
@@ -149,6 +146,17 @@
 				4C0D6A4A1FC8090400E25DFD /* Info.plist */,
 			);
 			path = SmartShoppingUITests;
+			sourceTree = "<group>";
+		};
+		4C0D6A5C1FC81A2B00E25DFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D6A581FC809D000E25DFD /* BaseViewController.swift */,
+				4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */,
+				4C0D6A561FC809B200E25DFD /* LoginViewController.swift */,
+				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		785C37FA5785ED043A5BC09A /* Frameworks */ = {
