@@ -7,12 +7,48 @@
 //
 
 import UIKit
+import Material
 
 class LoginViewController: BaseViewController {
+    
+    @IBOutlet fileprivate var tfEmail: ErrorTextField! {
+        didSet {
+            tfEmail.clearButtonMode = .whileEditing
+            tfEmail.isClearIconButtonEnabled = true
+            tfEmail.placeholderActiveColor = Color.white
+            tfEmail.dividerActiveColor = Color.white
+            tfEmail.textColor = Color.white
+        }
+    }
+    @IBOutlet fileprivate var tfPassword: TextField! {
+        didSet {
+            tfPassword.clearButtonMode = .whileEditing
+            tfPassword.isVisibilityIconButtonEnabled = true
+            tfPassword.placeholderActiveColor = Color.white
+            tfPassword.dividerActiveColor = Color.white
+            tfPassword.textColor = Color.white
+            
+            // Setting the visibilityIconButton color.
+            tfPassword.visibilityIconButton?.tintColor = Color.lightGreen.base
+        }
+    }
+    
+    @IBOutlet fileprivate var btnLogin: FlatButton! {
+        didSet {
+            btnLogin.backgroundColor = Color.lightGreen.base
+        }
+    }
+    
+    @IBOutlet fileprivate var btnClose: FlatButton! {
+        didSet {
+            btnClose.image = Icon.close
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = Color.teal.base
     }
     
     override func didReceiveMemoryWarning() {
@@ -21,4 +57,35 @@ class LoginViewController: BaseViewController {
     }
     
     
+    @IBAction fileprivate func didTapBTNLogin(_ sender: UIButton) {
+        tfEmail.resignFirstResponder()
+        tfPassword.resignFirstResponder()
+        
+        //TODO: Process for login here
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction fileprivate func didTapBTNClose(_ sender: UIButton) {
+        tfEmail.resignFirstResponder()
+        tfPassword.resignFirstResponder()
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension LoginViewController: TextFieldDelegate {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        (textField as? ErrorTextField)?.isErrorRevealed = false
+    }
+    
+    public func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        (textField as? ErrorTextField)?.isErrorRevealed = false
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        (textField as? ErrorTextField)?.isErrorRevealed = true
+        return true
+    }
 }

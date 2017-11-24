@@ -17,6 +17,9 @@
 		4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A561FC809B200E25DFD /* LoginViewController.swift */; };
 		4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A581FC809D000E25DFD /* BaseViewController.swift */; };
 		4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */; };
+		4C7DB4541FC877DB006D0810 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */; };
+		4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */; };
+		4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */; };
 		5BD03FC63044812AACFB1DDB /* Pods_SmartShoppingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */; };
 		E1C4A89AA3BB273EE4B67B7D /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */; };
 		E45D0CADE985290602192B78 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */; };
@@ -60,6 +63,9 @@
 		4C0D6A561FC809B200E25DFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C0D6A581FC809D000E25DFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.debug.xcconfig"; sourceTree = "<group>"; };
 		885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 		4C0D6A271FC8090400E25DFD /* SmartShopping */ = {
 			isa = PBXGroup;
 			children = (
+				4C7DB4521FC877C1006D0810 /* Views */,
 				4C0D6A5C1FC81A2B00E25DFD /* ViewControllers */,
 				4C0D6A281FC8090400E25DFD /* AppDelegate.swift */,
 				4C0D6A2C1FC8090400E25DFD /* Main.storyboard */,
@@ -157,6 +164,16 @@
 				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C7DB4521FC877C1006D0810 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */,
+				4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */,
+				4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		785C37FA5785ED043A5BC09A /* Frameworks */ = {
@@ -323,7 +340,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1EE49DD659E0557F7BA86D77 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -338,7 +355,7 @@
 		};
 		27D538D29D90E726D46ADB1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -463,11 +480,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */,
 				4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */,
 				4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */,
+				4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */,
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
 				4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */,
 				4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */,
+				4C7DB4541FC877DB006D0810 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
 				INFOPLIST_FILE = SmartShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
 				INFOPLIST_FILE = SmartShopping/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
