@@ -13,7 +13,7 @@ import Material
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let notificationManager = NotificationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,7 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().unselectedItemTintColor = Color.black.withAlphaComponent(0.30)
         
+        ESTConfig.setupAppID("smart-shopping-fys", andAppToken: "312f109fe4656098fc18b1ceccba96ae")
+        
+        /** TODO: Make sure your beacons have Estimote Monitoring feature set enabled:
+         https://community.estimote.com/hc/en-us/articles/226144728
+         */
+        
+        self.notificationManager.enableNotifications(deviceIdentifier: "eaff786a6a8a3a53c0136916842be606",
+                                                     enterMessage: "Hello, world! ✌️",
+                                                     exitMessage: "Goodbye! 👋")
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenString = deviceToken.hexString()
+        //TODO: Submit this token to server
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

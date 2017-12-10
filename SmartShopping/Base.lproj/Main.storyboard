@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SP9-E9-UwY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SP9-E9-UwY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,7 +55,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H &amp; M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pe-fa-C32">
-                                                    <rect key="frame" x="8" y="8" width="359" height="28"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="Ojv-zr-Zqy"/>
                                                     </constraints>
@@ -64,7 +64,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hämeenkatu 11, 33100 Tampere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-dP-tVN">
-                                                    <rect key="frame" x="8" y="44" width="359" height="17"/>
+                                                    <rect key="frame" x="15" y="47" width="345" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="g7T-0J-SXp"/>
                                                     </constraints>
@@ -73,14 +73,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HM.png" translatesAutoresizingMaskIntoConstraints="NO" id="qM9-Aa-TKU">
-                                                    <rect key="frame" x="8" y="73" width="359" height="170"/>
+                                                    <rect key="frame" x="15" y="76" width="345" height="170"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="170" id="uhq-5R-aU6"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-QM-KGv" customClass="FlatButton" customModule="Material">
-                                                    <rect key="frame" x="8" y="251" width="40" height="40"/>
+                                                    <rect key="frame" x="8" y="249" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="DVU-g0-5oj"/>
                                                         <constraint firstAttribute="height" constant="40" id="bfq-MH-xLT"/>
@@ -91,7 +91,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AE9-ff-b8Q" customClass="FlatButton" customModule="Material">
-                                                    <rect key="frame" x="327" y="251" width="40" height="40"/>
+                                                    <rect key="frame" x="327" y="249" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="UYL-zk-dDX"/>
                                                         <constraint firstAttribute="height" constant="40" id="Vtr-Ly-8bJ"/>
@@ -102,7 +102,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open until 9:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oa-TL-Pgf">
-                                                    <rect key="frame" x="68" y="263" width="239" height="17"/>
+                                                    <rect key="frame" x="68" y="261" width="239" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -321,16 +321,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-Tg-sb3">
-                                                    <rect key="frame" x="66" y="8" width="253" height="124.5"/>
+                                                    <rect key="frame" x="73" y="8" width="239" height="124.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn points for all your shopping at H &amp; M Club." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S33-Uy-iIH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="37.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="239" height="33"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-SI-H10">
-                                                            <rect key="frame" x="0.0" y="37.5" width="253" height="87"/>
+                                                            <rect key="frame" x="0.0" y="33" width="239" height="91.5"/>
                                                             <string key="text">The points on your purchases on hm.com are automatically recorded when you make your order. Collect points for your shopping at H &amp; M stores by displaying your H &amp; M Club card at checkout.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,7 +343,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-s8-bma" customClass="FlatButton" customModule="Material">
-                                                    <rect key="frame" x="8" y="10" width="50" height="50"/>
+                                                    <rect key="frame" x="15" y="13" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="mLa-9Z-QJw"/>
                                                         <constraint firstAttribute="width" constant="50" id="wy9-q2-6Cd"/>
@@ -354,7 +354,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u2-Nm-Tqd" customClass="FlatButton" customModule="Material">
-                                                    <rect key="frame" x="327" y="15" width="40" height="40"/>
+                                                    <rect key="frame" x="320" y="18" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="5vc-ZX-Ulr"/>
                                                         <constraint firstAttribute="width" constant="40" id="pbo-aI-iTO"/>
@@ -558,6 +558,6 @@
         <image name="yoga.jpg" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kzO-jW-Cy5"/>
+        <segue reference="3qH-Aa-mGD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,7 @@
 		4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A561FC809B200E25DFD /* LoginViewController.swift */; };
 		4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A581FC809D000E25DFD /* BaseViewController.swift */; };
 		4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */; };
+		4C54532C1FCB086E00A25ED1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C54532B1FCB086E00A25ED1 /* Extensions.swift */; };
 		4C7DB4541FC877DB006D0810 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */; };
 		4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */; };
 		4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 		4C7DB46C1FC8BA62006D0810 /* yoga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4671FC8B8D6006D0810 /* yoga.jpg */; };
 		4C7DB46D1FC8BA62006D0810 /* h-m-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */; };
 		4C7DB46E1FC8BA62006D0810 /* HM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4691FC8B8FB006D0810 /* HM.png */; };
+		4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */; };
 		5BD03FC63044812AACFB1DDB /* Pods_SmartShoppingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */; };
 		E1C4A89AA3BB273EE4B67B7D /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */; };
 		E45D0CADE985290602192B78 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */; };
@@ -70,6 +72,8 @@
 		4C0D6A561FC809B200E25DFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C0D6A581FC809D000E25DFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		4C54532A1FC96B8D00A25ED1 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		4C54532B1FCB086E00A25ED1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C7DB4531FC877DB006D0810 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4551FC8780D006D0810 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		4C7DB4671FC8B8D6006D0810 /* yoga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoga.jpg; sourceTree = "<group>"; };
 		4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h-m-logo.png"; sourceTree = "<group>"; };
 		4C7DB4691FC8B8FB006D0810 /* HM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HM.png; sourceTree = "<group>"; };
+		4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.debug.xcconfig"; sourceTree = "<group>"; };
 		885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,11 +148,13 @@
 				4C7DB45C1FC8889C006D0810 /* MockData */,
 				4C7DB4521FC877C1006D0810 /* Views */,
 				4C0D6A5C1FC81A2B00E25DFD /* ViewControllers */,
+				4CFA965C1FC9664800A44E6D /* Utils */,
 				4C0D6A281FC8090400E25DFD /* AppDelegate.swift */,
 				4C0D6A2C1FC8090400E25DFD /* Main.storyboard */,
 				4C0D6A2F1FC8090400E25DFD /* Assets.xcassets */,
 				4C0D6A311FC8090400E25DFD /* LaunchScreen.storyboard */,
 				4C0D6A341FC8090400E25DFD /* Info.plist */,
+				4C54532A1FC96B8D00A25ED1 /* ObjCBridge.h */,
 			);
 			path = SmartShopping;
 			sourceTree = "<group>";
@@ -203,6 +210,15 @@
 				4C7DB4691FC8B8FB006D0810 /* HM.png */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		4CFA965C1FC9664800A44E6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */,
+				4C54532B1FCB086E00A25ED1 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		785C37FA5785ED043A5BC09A /* Frameworks */ = {
@@ -393,13 +409,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartShopping-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		351B323A647AD42D70580DEC /* [CP] Embed Pods Frameworks */ = {
@@ -438,13 +457,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B1F87E39C6B1DBEC16244682 /* [CP] Copy Pods Resources */ = {
@@ -483,9 +505,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,13 +527,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -518,8 +550,10 @@
 				4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */,
 				4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */,
 				4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */,
+				4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */,
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
 				4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */,
+				4C54532C1FCB086E00A25ED1 /* Extensions.swift in Sources */,
 				4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */,
 				4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */,
 				4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */,
@@ -697,6 +731,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -714,6 +749,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
