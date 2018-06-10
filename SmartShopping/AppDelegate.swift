@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          https://community.estimote.com/hc/en-us/articles/226144728
          */
         
-        self.notificationManager.enableNotifications(deviceIdentifier: "eaff786a6a8a3a53c0136916842be606",
-                                                     enterMessage: "Hello, world! ✌️",
-                                                     exitMessage: "Goodbye! 👋")
+//        self.notificationManager.enableNotifications(deviceIdentifier: "eaff786a6a8a3a53c0136916842be606",
+//                                                     enterMessage: "Hello, world! ✌️",
+//                                                     exitMessage: "Goodbye! 👋")
         
         return true
     }

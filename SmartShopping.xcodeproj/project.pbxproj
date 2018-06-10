@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB1542AC32B0B35E00C7DBF /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD7814CD7881F1D02FB53BC /* Pods_SmartShoppingUITests.framework */; };
 		4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A281FC8090400E25DFD /* AppDelegate.swift */; };
 		4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */; };
 		4C0D6A2E1FC8090400E25DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2C1FC8090400E25DFD /* Main.storyboard */; };
@@ -29,9 +30,8 @@
 		4C7DB46D1FC8BA62006D0810 /* h-m-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */; };
 		4C7DB46E1FC8BA62006D0810 /* HM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7DB4691FC8B8FB006D0810 /* HM.png */; };
 		4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */; };
-		5BD03FC63044812AACFB1DDB /* Pods_SmartShoppingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */; };
-		E1C4A89AA3BB273EE4B67B7D /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */; };
-		E45D0CADE985290602192B78 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */; };
+		63897FAA2B0A79C86F460713 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */; };
+		64B2ECEA93CA9CFF16FACF34 /* Pods_SmartShoppingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F441B2DA9E36BDBE3FEA3D /* Pods_SmartShoppingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06329440C27E72BBC238AE7D /* Pods-SmartShoppingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1B5365F9204E4D88B4CD4A82 /* Pods-SmartShopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.release.xcconfig"; sourceTree = "<group>"; };
-		338CC2A7FC2EBA0354A564FF /* Pods-SmartShoppingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.release.xcconfig"; sourceTree = "<group>"; };
+		1838CEC624A0CA3B64C0D6CA /* Pods-SmartShoppingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		42CB0AE000D379EB46DEF199 /* Pods-SmartShoppingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.release.xcconfig"; sourceTree = "<group>"; };
+		49F441B2DA9E36BDBE3FEA3D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0D6A251FC8090400E25DFD /* SmartShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0D6A281FC8090400E25DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -85,11 +84,12 @@
 		4C7DB4681FC8B8EB006D0810 /* h-m-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "h-m-logo.png"; sourceTree = "<group>"; };
 		4C7DB4691FC8B8FB006D0810 /* HM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HM.png; sourceTree = "<group>"; };
 		4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.debug.xcconfig"; sourceTree = "<group>"; };
-		885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0FE6806794AA079986B79A0 /* Pods-SmartShoppingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		645BA20D7C2ED0261FE8FB61 /* Pods-SmartShoppingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		709497E7287585BCFB7D5DFE /* Pods-SmartShoppingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShoppingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F8DCAEB994FF77FBC68137 /* Pods-SmartShopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.release.xcconfig"; sourceTree = "<group>"; };
+		BBD7814CD7881F1D02FB53BC /* Pods_SmartShoppingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EDE2989D18C31507E8A4AC /* Pods-SmartShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E45D0CADE985290602192B78 /* Pods_SmartShopping.framework in Frameworks */,
+				63897FAA2B0A79C86F460713 /* Pods_SmartShopping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BD03FC63044812AACFB1DDB /* Pods_SmartShoppingTests.framework in Frameworks */,
+				64B2ECEA93CA9CFF16FACF34 /* Pods_SmartShoppingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C4A89AA3BB273EE4B67B7D /* Pods_SmartShoppingUITests.framework in Frameworks */,
+				0FB1542AC32B0B35E00C7DBF /* Pods_SmartShoppingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +127,8 @@
 				4C0D6A3C1FC8090400E25DFD /* SmartShoppingTests */,
 				4C0D6A471FC8090400E25DFD /* SmartShoppingUITests */,
 				4C0D6A261FC8090400E25DFD /* Products */,
-				F383229015412BEC2F831D4D /* Pods */,
-				785C37FA5785ED043A5BC09A /* Frameworks */,
+				BD4EA1296EE9A98E44FFA951 /* Pods */,
+				F21D6D8E654663982716C28B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,27 +221,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		785C37FA5785ED043A5BC09A /* Frameworks */ = {
+		BD4EA1296EE9A98E44FFA951 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				03C3191BE79793D3329E3279 /* Pods_SmartShopping.framework */,
-				91DDBBD8D29192BB0563BA4D /* Pods_SmartShoppingTests.framework */,
-				F6817B9EFF177E91C39A4D65 /* Pods_SmartShoppingUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F383229015412BEC2F831D4D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */,
-				1B5365F9204E4D88B4CD4A82 /* Pods-SmartShopping.release.xcconfig */,
-				885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */,
-				338CC2A7FC2EBA0354A564FF /* Pods-SmartShoppingTests.release.xcconfig */,
-				06329440C27E72BBC238AE7D /* Pods-SmartShoppingUITests.debug.xcconfig */,
-				A0FE6806794AA079986B79A0 /* Pods-SmartShoppingUITests.release.xcconfig */,
+				D6EDE2989D18C31507E8A4AC /* Pods-SmartShopping.debug.xcconfig */,
+				B4F8DCAEB994FF77FBC68137 /* Pods-SmartShopping.release.xcconfig */,
+				1838CEC624A0CA3B64C0D6CA /* Pods-SmartShoppingTests.debug.xcconfig */,
+				42CB0AE000D379EB46DEF199 /* Pods-SmartShoppingTests.release.xcconfig */,
+				709497E7287585BCFB7D5DFE /* Pods-SmartShoppingUITests.debug.xcconfig */,
+				645BA20D7C2ED0261FE8FB61 /* Pods-SmartShoppingUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F21D6D8E654663982716C28B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */,
+				49F441B2DA9E36BDBE3FEA3D /* Pods_SmartShoppingTests.framework */,
+				BBD7814CD7881F1D02FB53BC /* Pods_SmartShoppingUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C0D6A4D1FC8090400E25DFD /* Build configuration list for PBXNativeTarget "SmartShopping" */;
 			buildPhases = (
-				27D538D29D90E726D46ADB1D /* [CP] Check Pods Manifest.lock */,
+				8B59FD14EDA43C9704A108B6 /* [CP] Check Pods Manifest.lock */,
 				4C0D6A211FC8090400E25DFD /* Sources */,
 				4C0D6A221FC8090400E25DFD /* Frameworks */,
 				4C0D6A231FC8090400E25DFD /* Resources */,
-				EDE00BC5B608FBFCFE0CFAAA /* [CP] Embed Pods Frameworks */,
-				1EE49DD659E0557F7BA86D77 /* [CP] Copy Pods Resources */,
+				CAE3F5ACDDDC8AAFBCB24A33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,12 +270,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C0D6A501FC8090400E25DFD /* Build configuration list for PBXNativeTarget "SmartShoppingTests" */;
 			buildPhases = (
-				9DF4918189812AF0117168E8 /* [CP] Check Pods Manifest.lock */,
+				D893CF9892A3F267524CE0E3 /* [CP] Check Pods Manifest.lock */,
 				4C0D6A351FC8090400E25DFD /* Sources */,
 				4C0D6A361FC8090400E25DFD /* Frameworks */,
 				4C0D6A371FC8090400E25DFD /* Resources */,
-				351B323A647AD42D70580DEC /* [CP] Embed Pods Frameworks */,
-				4391BA9D808E8DA3C82F685A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,12 +289,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C0D6A531FC8090400E25DFD /* Build configuration list for PBXNativeTarget "SmartShoppingUITests" */;
 			buildPhases = (
-				FA7AC7DBE73D16F4EE5196F1 /* [CP] Check Pods Manifest.lock */,
+				91497F040AAC6F245FC4A544 /* [CP] Check Pods Manifest.lock */,
 				4C0D6A401FC8090400E25DFD /* Sources */,
 				4C0D6A411FC8090400E25DFD /* Frameworks */,
 				4C0D6A421FC8090400E25DFD /* Resources */,
-				D3DA45ECB3C9B0B184082F5C /* [CP] Embed Pods Frameworks */,
-				B1F87E39C6B1DBEC16244682 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Ngoc LE";
 				TargetAttributes = {
 					4C0D6A241FC8090400E25DFD = {
@@ -388,24 +383,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EE49DD659E0557F7BA86D77 /* [CP] Copy Pods Resources */ = {
+		8B59FD14EDA43C9704A108B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27D538D29D90E726D46ADB1D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
@@ -421,37 +401,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		351B323A647AD42D70580DEC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4391BA9D808E8DA3C82F685A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShoppingTests/Pods-SmartShoppingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DF4918189812AF0117168E8 /* [CP] Check Pods Manifest.lock */ = {
+		91497F040AAC6F245FC4A544 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,44 +412,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B1F87E39C6B1DBEC16244682 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3DA45ECB3C9B0B184082F5C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShoppingUITests/Pods-SmartShoppingUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDE00BC5B608FBFCFE0CFAAA /* [CP] Embed Pods Frameworks */ = {
+		CAE3F5ACDDDC8AAFBCB24A33 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,7 +441,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartShopping/Pods-SmartShopping-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA7AC7DBE73D16F4EE5196F1 /* [CP] Check Pods Manifest.lock */ = {
+		D893CF9892A3F267524CE0E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -532,7 +452,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SmartShoppingTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -626,6 +546,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -633,6 +554,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -683,6 +605,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -690,6 +613,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -721,15 +645,16 @@
 		};
 		4C0D6A4E1FC8090400E25DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59EA0C14E7A5AF529292D936 /* Pods-SmartShopping.debug.xcconfig */;
+			baseConfigurationReference = D6EDE2989D18C31507E8A4AC /* Pods-SmartShopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
 				INFOPLIST_FILE = SmartShopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
+				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
@@ -739,15 +664,16 @@
 		};
 		4C0D6A4F1FC8090400E25DFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B5365F9204E4D88B4CD4A82 /* Pods-SmartShopping.release.xcconfig */;
+			baseConfigurationReference = B4F8DCAEB994FF77FBC68137 /* Pods-SmartShopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
 				INFOPLIST_FILE = SmartShopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SmartShopping;
+				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
@@ -757,7 +683,7 @@
 		};
 		4C0D6A511FC8090400E25DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 885C7163FA4819623AFEC939 /* Pods-SmartShoppingTests.debug.xcconfig */;
+			baseConfigurationReference = 1838CEC624A0CA3B64C0D6CA /* Pods-SmartShoppingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -774,7 +700,7 @@
 		};
 		4C0D6A521FC8090400E25DFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 338CC2A7FC2EBA0354A564FF /* Pods-SmartShoppingTests.release.xcconfig */;
+			baseConfigurationReference = 42CB0AE000D379EB46DEF199 /* Pods-SmartShoppingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -791,7 +717,7 @@
 		};
 		4C0D6A541FC8090400E25DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06329440C27E72BBC238AE7D /* Pods-SmartShoppingUITests.debug.xcconfig */;
+			baseConfigurationReference = 709497E7287585BCFB7D5DFE /* Pods-SmartShoppingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -807,7 +733,7 @@
 		};
 		4C0D6A551FC8090400E25DFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0FE6806794AA079986B79A0 /* Pods-SmartShoppingUITests.release.xcconfig */;
+			baseConfigurationReference = 645BA20D7C2ED0261FE8FB61 /* Pods-SmartShoppingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -15,6 +15,9 @@ extension NotificationManager {
 
 class NotificationManager: NSObject {
     
+    var enterMessage: String?
+    var exitMessage: String?
+    
     fileprivate lazy var monitoringManager: ESTMonitoringV2Manager = ESTMonitoringV2Manager(desiredMeanTriggerDistance: Parameters.desiredZoneRadius, delegate: self)
     
     internal func enableNotifications(deviceIdentifier: String) {
@@ -40,11 +43,27 @@ class NotificationManager: NSObject {
         self.monitoringManager.startMonitoring(forIdentifiers: [deviceIdentifier])
     }
     
-    fileprivate func presentNotification(message: String) {
-        let notification = UILocalNotification()
-        notification.alertBody = message
-        notification.soundName = UILocalNotificationDefaultSoundName
-        UIApplication.shared.presentLocalNotificationNow(notification)
+    fileprivate func presentNotification(message: String?) {
+        guard let body = message else {
+            return
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Smart Shopping"
+        content.body = body
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: false)
+        
+        let identifier = "SSLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if (error != nil) {
+                print(error!)
+            } else {
+                print("Success! ID:\(identifier), Message:\(body), Time:\(trigger.timeInterval.magnitude) seconds")
+            }
+        }
     }
     
     fileprivate func name(_ state: ESTMonitoringState) -> String {
@@ -72,11 +91,11 @@ extension NotificationManager: ESTMonitoringV2ManagerDelegate {
     
     func monitoringManager(_ manager: ESTMonitoringV2Manager, didEnterDesiredRangeOfBeaconWithIdentifier identifier: String) {
         print("Entered range of \(identifier).")
-        self.presentNotification(message: self.enterMessage!)
+        self.presentNotification(message: self.enterMessage)
     }
     
     func monitoringManager(_ manager: ESTMonitoringV2Manager, didExitDesiredRangeOfBeaconWithIdentifier identifier: String) {
         print("Exited range of \(identifier).")
-        self.presentNotification(message: self.exitMessage!)
+        self.presentNotification(message: self.exitMessage)
     }
 }
