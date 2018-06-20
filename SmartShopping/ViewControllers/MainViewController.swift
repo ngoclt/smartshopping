@@ -36,6 +36,6 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "OpenStorePromotions", sender: self)
+        self.performSegue(withIdentifier: "OpenStoreCategory", sender: self)
     }
 }

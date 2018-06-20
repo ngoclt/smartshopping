@@ -7,22 +7,20 @@
 //
 
 import UIKit
-import Material
 
-class NotificationTableViewCell: TableViewCell {
+class NotificationTableViewCell: UITableViewCell {
     
-    @IBOutlet fileprivate var btnThumb: FlatButton! {
+    @IBOutlet fileprivate var btnThumb: UIButton! {
         didSet {
             btnThumb.layer.cornerRadius = btnThumb.bounds.size.width/2
             btnThumb.layer.masksToBounds = true
-            btnThumb.layer.borderColor = Color.teal.base.cgColor
             btnThumb.layer.borderWidth = 1.0
         }
     }
     
-    @IBOutlet fileprivate var btnCheck: FlatButton! {
+    @IBOutlet fileprivate var btnCheck: UIButton! {
         didSet {
-            btnCheck.setImage(Icon.check?.tint(with: Color.orange.base), for: .normal)
+//            btnCheck.setImage(Icon.check?.tint(with: Color.orange.base), for: .normal)
         }
     }
     

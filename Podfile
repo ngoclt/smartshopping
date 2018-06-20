@@ -7,8 +7,10 @@ target 'SmartShopping' do
     
     # Pods for SmartShopping
     pod 'Alamofire', '~> 4.5'
-    pod 'Material', '~> 2.12'
+    pod 'DesignableKit'
     pod 'EstimoteSDK'
+    pod 'MaterialComponents'
+    pod 'SwiftyBeaver'
     
     target 'SmartShoppingTests' do
         inherit! :search_paths

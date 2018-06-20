@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import Material
 
-class StoreTableViewCell: TableViewCell {
+class StoreTableViewCell: UITableViewCell {
     
     @IBOutlet fileprivate var lblName: UILabel! {
         didSet {
-            lblName.textColor = Color.orange.base
+            
         }
     }
     
@@ -29,21 +28,21 @@ class StoreTableViewCell: TableViewCell {
         }
     }
     
-    @IBOutlet fileprivate var btnFavorite: FlatButton! {
+    @IBOutlet fileprivate var btnFavorite: UIButton! {
         didSet {
-            btnFavorite.setImage(Icon.favorite?.tint(with: Color.red.base), for: .normal)
+            
         }
     }
     
-    @IBOutlet fileprivate var btnShare: FlatButton! {
+    @IBOutlet fileprivate var btnShare: UIButton! {
         didSet {
-            btnShare.setImage(Icon.share?.tint(with: Color.blue.base), for: .normal)
+            
         }
     }
     
     @IBOutlet fileprivate var lblOpeningTime: UILabel! {
         didSet {
-            lblOpeningTime.textColor = Color.lightGreen.base
+            
         }
     }
     

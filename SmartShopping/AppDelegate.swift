@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import Material
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,15 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UINavigationBar.appearance().barTintColor = Color.teal.base
-        UINavigationBar.appearance().barStyle = UIBarStyle.black
-        UINavigationBar.appearance().tintColor = Color.white
-        
-        UITabBar.appearance().barTintColor = Color.teal.base
-        UITabBar.appearance().barStyle = UIBarStyle.default
-        UITabBar.appearance().tintColor = Color.white
-        
-        UITabBar.appearance().unselectedItemTintColor = Color.black.withAlphaComponent(0.30)
+//        UINavigationBar.appearance().barTintColor = Color.teal.base
+//        UINavigationBar.appearance().barStyle = UIBarStyle.black
+//        UINavigationBar.appearance().tintColor = Color.white
+//
+//        UITabBar.appearance().barTintColor = Color.teal.base
+//        UITabBar.appearance().barStyle = UIBarStyle.default
+//        UITabBar.appearance().tintColor = Color.white
+//
+//        UITabBar.appearance().unselectedItemTintColor = Color.black.withAlphaComponent(0.30)
         
         ESTConfig.setupAppID("smart-shopping-fys", andAppToken: "312f109fe4656098fc18b1ceccba96ae")
         

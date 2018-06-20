@@ -1,14 +1,14 @@
 //
-//  PromotionCollectionViewCell.swift
+//  CategoryCollectionViewCell.swift
 //  SmartShopping
 //
-//  Created by Ngoc LE on 11/24/17.
-//  Copyright © 2017 Ngoc LE. All rights reserved.
+//  Created by Ngoc LE on 6/10/18.
+//  Copyright © 2018 Ngoc LE. All rights reserved.
 //
 
 import UIKit
 
-class PromotionCollectionViewCell: UICollectionViewCell {
+class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet fileprivate var ivThumb: UIImageView! {
         didSet {
@@ -26,6 +26,10 @@ class PromotionCollectionViewCell: UICollectionViewCell {
         didSet {
             
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     func refreshData(_ item: String) {

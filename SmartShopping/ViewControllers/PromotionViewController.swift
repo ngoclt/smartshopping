@@ -7,31 +7,29 @@
 //
 
 import UIKit
-import Material
 
 class PromotionViewController: BaseViewController {
     
-    @IBOutlet fileprivate var collectionView: CollectionView! {
+    @IBOutlet fileprivate var collectionView: UICollectionView! {
         didSet {
-            collectionView.backgroundColor = Color.lime.lighten5
+            
         }
     }
     
     @IBOutlet fileprivate var pageControl: UIPageControl! {
         didSet {
-            pageControl.pageIndicatorTintColor = Color.lightGray
-            pageControl.currentPageIndicatorTintColor = Color.lightGreen.base
+            pageControl.pageIndicatorTintColor = .lightGray
+            pageControl.currentPageIndicatorTintColor = .green
         }
     }
     
-    var dataSourceItems = [DataSourceItem]()
+    var dataSourceItems: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Promotions"
-        
-        view.backgroundColor = Color.teal.base
+    
         
         prepareDataSourceItems()
         prepareCollectionView()
@@ -53,20 +51,13 @@ class PromotionViewController: BaseViewController {
 extension PromotionViewController {
     fileprivate func prepareDataSourceItems() {
         let data = ["meditation.jpg", "yoga.jpg", "surf.jpg"]
-        
-        data.forEach { [unowned self, w = view.bounds.size.width, h = view.bounds.size.height] (item) in
-            self.dataSourceItems.append(DataSourceItem(data: item, width: w, height: h))
-        }
     }
     
     fileprivate func prepareCollectionView() {
-        let collectionViewLayout = collectionView.collectionViewLayout as! CollectionViewLayout
-        collectionViewLayout.scrollDirection = .horizontal
-        collectionView.interimSpacePreset = .none
     }
 }
 
-extension PromotionViewController: CollectionViewDataSource {
+extension PromotionViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -83,7 +74,7 @@ extension PromotionViewController: CollectionViewDataSource {
     }
 }
 
-extension PromotionViewController: CollectionViewDelegate {
+extension PromotionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         self.pageControl.currentPage = indexPath.row
     }
