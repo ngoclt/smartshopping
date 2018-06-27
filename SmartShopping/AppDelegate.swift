@@ -33,16 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.addDestination(file)
         log.addDestination(cloud)
         
-        
-//        UINavigationBar.appearance().barTintColor = Color.teal.base
-//        UINavigationBar.appearance().barStyle = UIBarStyle.black
-//        UINavigationBar.appearance().tintColor = Color.white
-//
-//        UITabBar.appearance().barTintColor = Color.teal.base
-//        UITabBar.appearance().barStyle = UIBarStyle.default
-//        UITabBar.appearance().tintColor = Color.white
-//
-//        UITabBar.appearance().unselectedItemTintColor = Color.black.withAlphaComponent(0.30)
+        AppearanceManager.configureNavigationBar()
+        AppearanceManager.configureTabBar()
         
         ESTConfig.setupAppID("smart-shopping-fys", andAppToken: "312f109fe4656098fc18b1ceccba96ae")
         
