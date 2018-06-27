@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
   - DesignableKit (0.0.4)
   - EstimoteSDK (4.27.0)
   - MaterialComponents (55.4.0):
@@ -438,10 +443,13 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - ObjectMapper (3.3.0)
   - SwiftyBeaver (1.6.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
+  - Alamofire
+  - AlamofireImage
+  - AlamofireObjectMapper
   - DesignableKit
   - EstimoteSDK
   - MaterialComponents
@@ -450,6 +458,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
     - DesignableKit
     - EstimoteSDK
     - MaterialComponents
@@ -458,10 +468,13 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - MotionTransitioning
+    - ObjectMapper
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   DesignableKit: db2642a3276286123575773c016124181b19a414
   EstimoteSDK: 61935c7fbcb9fe93b97b0360351aef66fb1c338d
   MaterialComponents: 1a021ab211e40e95e27eb87d9051d558e8f095bd
@@ -470,8 +483,9 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
 
-PODFILE CHECKSUM: 7b5b1619d849abbe447501217b224f15a026ef1e
+PODFILE CHECKSUM: 5d53badef50ab0e5234b08dc1367169fe0b0f1e0
 
 COCOAPODS: 1.5.3

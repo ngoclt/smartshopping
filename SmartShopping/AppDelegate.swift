@@ -19,6 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // add log destinations. at least one is needed!
+        let console = ConsoleDestination()  // log to Xcode Console
+        let file = FileDestination()  // log to default swiftybeaver.log file
+        let cloud = SBPlatformDestination(appID: "Z5RBee", appSecret: "ga0arEq2vwozFrj0btqLjknUbA5ao5jm", encryptionKey: "jJidpHnhsytdw8mkfgKaepqqqdwzxVti") // to cloud
+        
+        // use custom format and set console output to short time, log level & message
+        console.format = "$DHH:mm:ss$d $L $M"
+        // or use this for JSON output: console.format = "$J"
+        
+        // add the destinations to SwiftyBeaver
+        log.addDestination(console)
+        log.addDestination(file)
+        log.addDestination(cloud)
+        
+        
 //        UINavigationBar.appearance().barTintColor = Color.teal.base
 //        UINavigationBar.appearance().barStyle = UIBarStyle.black
 //        UINavigationBar.appearance().tintColor = Color.white

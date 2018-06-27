@@ -776,11 +776,10 @@
         <scene sceneID="bQ0-xO-uxB">
             <objects>
                 <tabBarController id="SP9-E9-UwY" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="wnw-Eu-Pgs">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wnw-Eu-Pgs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

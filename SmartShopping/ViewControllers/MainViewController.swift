@@ -14,6 +14,15 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Nearby"
+        
+        let viewModel = StoreViewModel()
+        viewModel.fetchList { response, error in
+            if let products = response?.results {
+                log.info(products)
+            } else {
+                log.error(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
