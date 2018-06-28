@@ -10,9 +10,7 @@ target 'SmartShopping' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage'
-    pod 'DesignableKit'
     pod 'EstimoteSDK'
-    pod 'MaterialComponents'
     pod 'SwiftyBeaver'
     
     target 'SmartShoppingTests' do

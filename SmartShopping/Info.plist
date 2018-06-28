@@ -49,6 +49,7 @@
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>FontAwesomeSolid.otf</string>
 		<string>Roboto-Black.ttf</string>
 		<string>Roboto-BlackItalic.ttf</string>
 		<string>Roboto-Bold.ttf</string>

@@ -14,8 +14,8 @@ import ObjectMapper
 
 
 struct APIPath {
-    static let storePath = "store/"
-    static let productPath = "product/"
+    static let storePath = "stores/"
+    static let productPath = "products/"
 }
 
 struct Endpoint {

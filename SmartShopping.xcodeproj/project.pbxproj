@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FB1542AC32B0B35E00C7DBF /* Pods_SmartShoppingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD7814CD7881F1D02FB53BC /* Pods_SmartShoppingUITests.framework */; };
 		4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A281FC8090400E25DFD /* AppDelegate.swift */; };
-		4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */; };
+		4C0D6A2B1FC8090400E25DFD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2A1FC8090400E25DFD /* StoreViewController.swift */; };
 		4C0D6A2E1FC8090400E25DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2C1FC8090400E25DFD /* Main.storyboard */; };
 		4C0D6A301FC8090400E25DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D6A2F1FC8090400E25DFD /* Assets.xcassets */; };
 		4C0D6A331FC8090400E25DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D6A311FC8090400E25DFD /* LaunchScreen.storyboard */; };
@@ -31,6 +31,7 @@
 		4C3273E120E40AC0008A0F0E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273D520E40AC0008A0F0E /* Roboto-Regular.ttf */; };
 		4C3273E220E40AC0008A0F0E /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273D620E40AC0008A0F0E /* Roboto-Thin.ttf */; };
 		4C3273E420E40C33008A0F0E /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3273E320E40C33008A0F0E /* AppearanceManager.swift */; };
+		4C3273E620E42807008A0F0E /* FontAwesomeSolid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273E520E42804008A0F0E /* FontAwesomeSolid.otf */; };
 		4C40A87C20DAB2FF00962C28 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40A87B20DAB2FF00962C28 /* Store.swift */; };
 		4C40A87E20DAB30D00962C28 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40A87D20DAB30D00962C28 /* Category.swift */; };
 		4C40A88020DAB31600962C28 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40A87F20DAB31600962C28 /* Product.swift */; };
@@ -83,7 +84,7 @@
 		49F441B2DA9E36BDBE3FEA3D /* Pods_SmartShoppingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShoppingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0D6A251FC8090400E25DFD /* SmartShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0D6A281FC8090400E25DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4C0D6A2A1FC8090400E25DFD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		4C0D6A2D1FC8090400E25DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C0D6A2F1FC8090400E25DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C0D6A321FC8090400E25DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		4C3273D520E40AC0008A0F0E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		4C3273D620E40AC0008A0F0E /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		4C3273E320E40C33008A0F0E /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		4C3273E520E42804008A0F0E /* FontAwesomeSolid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesomeSolid.otf; sourceTree = "<group>"; };
 		4C40A87B20DAB2FF00962C28 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		4C40A87D20DAB30D00962C28 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4C40A87F20DAB31600962C28 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -236,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				4C0D6A581FC809D000E25DFD /* BaseViewController.swift */,
-				4C0D6A2A1FC8090400E25DFD /* MainViewController.swift */,
+				4C0D6A2A1FC8090400E25DFD /* StoreViewController.swift */,
 				4C0D6A561FC809B200E25DFD /* LoginViewController.swift */,
 				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
 				4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */,
@@ -257,6 +259,7 @@
 		4C3273CA20E40A9C008A0F0E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4C3273E520E42804008A0F0E /* FontAwesomeSolid.otf */,
 				4C3273CE20E40ABF008A0F0E /* Roboto-Black.ttf */,
 				4C3273D020E40ABF008A0F0E /* Roboto-BlackItalic.ttf */,
 				4C3273CC20E40ABF008A0F0E /* Roboto-Bold.ttf */,
@@ -482,6 +485,7 @@
 				4C3273DF20E40AC0008A0F0E /* Roboto-Light.ttf in Resources */,
 				4C3273D920E40AC0008A0F0E /* Roboto-Italic.ttf in Resources */,
 				4C3273E120E40AC0008A0F0E /* Roboto-Regular.ttf in Resources */,
+				4C3273E620E42807008A0F0E /* FontAwesomeSolid.otf in Resources */,
 				4C7DB46D1FC8BA62006D0810 /* h-m-logo.png in Resources */,
 				4C3273DA20E40AC0008A0F0E /* Roboto-Black.ttf in Resources */,
 				4C3273DB20E40AC0008A0F0E /* Roboto-ThinItalic.ttf in Resources */,
@@ -551,13 +555,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/DesignableKit/DesignableKit.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
@@ -566,13 +563,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DesignableKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
@@ -621,7 +611,7 @@
 				4C40A88220DAB32100962C28 /* Notification.swift in Sources */,
 				4C97B87720CD803500D681F9 /* StoreCategoryViewController.swift in Sources */,
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
-				4C0D6A2B1FC8090400E25DFD /* MainViewController.swift in Sources */,
+				4C0D6A2B1FC8090400E25DFD /* StoreViewController.swift in Sources */,
 				4C40A87E20DAB30D00962C28 /* Category.swift in Sources */,
 				4C54532C1FCB086E00A25ED1 /* Extensions.swift in Sources */,
 				4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */,

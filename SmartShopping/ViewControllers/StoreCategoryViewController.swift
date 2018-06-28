@@ -21,7 +21,7 @@ class StoreCategoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Category"
+        self.title = "Stores"
         
         prepareDataSourceItems()
         prepareCollectionView()
@@ -36,7 +36,7 @@ class StoreCategoryViewController: BaseViewController {
 
 extension StoreCategoryViewController {
     fileprivate func prepareDataSourceItems() {
-        let data = ["meditation.jpg", "yoga.jpg", "surf.jpg"]
+        
         
     }
     

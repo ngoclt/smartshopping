@@ -11,16 +11,18 @@ import ObjectMapper
 
 class Store: Mappable {
     
-    private var objectId: String
-    private var name: String
-    private var address: String
-    private var imageCover: String
+    var objectId: String
+    var name: String
+    var address: String
+    var imageCover: String
+    var liked: Bool
     
     init() {
-        self.objectId = ""
-        self.name = ""
-        self.address = ""
-        self.imageCover = ""
+        objectId = ""
+        name = ""
+        address = ""
+        imageCover = ""
+        liked = false
     }
     
     required convenience init?(map: Map) {
@@ -32,5 +34,6 @@ class Store: Mappable {
         name <- map["name"]
         address <- map["address"]
         imageCover <- map["cover"]
+        liked <- map["liked"]
     }
 }

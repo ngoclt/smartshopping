@@ -62,3 +62,14 @@ extension UIImage {
     }
 }
 
+extension UIImageView {
+    func setImageURL(_ urlString: String) {
+        let placeholder = UIImage(named: "ImagePlaceholder")
+        if let url = URL(string: urlString) {
+            self.af_setImage(withURL: url, placeholderImage: placeholder)
+        } else {
+            self.image = placeholder
+        }
+    }
+}
+
