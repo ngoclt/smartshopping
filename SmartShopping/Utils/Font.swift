@@ -15,7 +15,7 @@ enum FontBook: String {
     case robotoBold             = "Roboto-Bold"
     case robotoBoldItalic       = "Roboto-BoldItalic"
     case robotoItalic           = "Roboto-Italic"
-    case robotoLight            = "Roboto_Light"
+    case robotoLight            = "Roboto-Light"
     case robotoLightItalic      = "Roboto-LightItalic"
     case robotoMedium           = "Roboto-Medium"
     case robotoMediumItalic     = "Roboto-MediumItalic"

@@ -26,21 +26,10 @@ class StoreTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        let shadowPath = UIBezierPath(rect: vContainer.bounds)
-        vContainer.layer.masksToBounds = false
-        vContainer.layer.shadowColor = UIColor.darkGray.cgColor
-        vContainer.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-        vContainer.layer.shadowOpacity = 0.3
-        vContainer.layer.shadowPath = shadowPath.cgPath
-    }
 
     
     private func reloadData() {
-        lblName.text = data.name
+        lblName.text = data.name.uppercased()
         lblAddress.text = data.address
         ivThumb.setImageURL(data.imageCover)
     }

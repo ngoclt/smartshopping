@@ -12,15 +12,18 @@ import AlamofireImage
 import AlamofireObjectMapper
 import ObjectMapper
 
-
 struct APIPath {
     static let storePath = "stores/"
     static let productPath = "products/"
+    
+    static func storeProductPath(id: Int64) -> String {
+        return "stores/\(id)/products/"
+    }
 }
 
 struct Endpoint {
     
-    static let baseUrl = "http://192.168.1.118:8000/api/v1/"
+    static let baseUrl = "http://0.0.0.0:8000/api/v1/"
     
     var url: String
     var method: HTTPMethod

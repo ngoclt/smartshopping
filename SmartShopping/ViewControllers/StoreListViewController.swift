@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StoreListViewController.swift
 //  SmartShopping
 //
 //  Created by Ngoc LE on 11/24/17.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class StoreViewController: BaseViewController {
+class StoreListViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    fileprivate var selectedStore: Store?
     
     var dataSourceItems: [Store] = [] {
         didSet {
@@ -29,9 +31,18 @@ class StoreViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? StoreDetailViewController,
+            let store = selectedStore else {
+            return
+        }
+        
+        viewController.store = store
+    }
 }
 
-extension StoreViewController {
+extension StoreListViewController {
     func refreshData() {
         let viewModel = StoreViewModel()
         viewModel.fetchList { [weak self] response, error in
@@ -48,7 +59,7 @@ extension StoreViewController {
     }
 }
 
-extension StoreViewController: UITableViewDataSource {
+extension StoreListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceItems.count
@@ -61,8 +72,9 @@ extension StoreViewController: UITableViewDataSource {
     }
 }
 
-extension StoreViewController: UITableViewDelegate {
+extension StoreListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "OpenStoreCategory", sender: self)
+        selectedStore = dataSourceItems[indexPath.row]
+        self.performSegue(withIdentifier: "OpenStoreDetail", sender: self)
     }
 }

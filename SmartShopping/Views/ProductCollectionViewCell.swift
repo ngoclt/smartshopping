@@ -16,11 +16,18 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet fileprivate var lblPrice: UILabel!
     
+    var data: Product! {
+        didSet {
+            refreshData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func refreshData(_ item: String) {
-        self.ivThumb.image = UIImage(named: item)
+    func refreshData() {
+        ivThumb.setImageURL(data.image)
+        lblPrice.text = data.price
     }
 }

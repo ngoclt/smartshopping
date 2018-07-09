@@ -11,10 +11,10 @@ import ObjectMapper
 
 class Category: Mappable {
     
-    private var objectId: String
-    private var name: String
-    private var description: String
-    private var thumbnail: String
+    var objectId: String
+    var name: String
+    var description: String
+    var thumbnail: String
     
     init() {
         self.objectId = ""

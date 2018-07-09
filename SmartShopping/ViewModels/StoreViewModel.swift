@@ -22,11 +22,20 @@ class StoreViewModel {
         }
     }
     
-    func fetchDetail(_ callback: @escaping (Store?, NSError?) -> Void) {
+    func fetchDetail(storeId: String, callback: @escaping (Store?, NSError?) -> Void) {
         
     }
     
-    func fetchProduct(_ callback: @escaping (ResponseList<Product>?, NSError?) -> Void) {
+    func fetchProduct(storeId: Int64, callback: @escaping (ResponseList<Product>?, NSError?) -> Void) {
+        let endpoint = Endpoint(path: APIPath.storeProductPath(id: storeId), method: .get)
+        
+        let call = APICall(endpoint)
+        call.requestObject(type: ResponseList<Product>.self) { result, error in
+            callback(result, error)
+        }
+    }
+    
+    func fetchCategory(storeId: String, callback: @escaping (ResponseList<Category>?, NSError?) -> Void) {
         
     }
 }

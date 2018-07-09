@@ -11,11 +11,14 @@ import ObjectMapper
 
 class Product: Mappable {
     
-    private var objectId: String
-    private var name: String
-    private var description: String
-    private var image: String
-    private var thumbnail: String
+    var objectId: String
+    var name: String
+    var description: String
+    var brand: String
+    var price: String
+    var quantity: Int
+    var image: String
+    var thumbnail: String
     
     init() {
         self.objectId = ""
@@ -23,6 +26,9 @@ class Product: Mappable {
         self.description = ""
         self.image = ""
         self.thumbnail = ""
+        self.brand = ""
+        self.price = ""
+        self.quantity = 0
     }
     
     required convenience init?(map: Map) {
@@ -35,5 +41,8 @@ class Product: Mappable {
         description <- map["description"]
         image <- map["image"]
         thumbnail <- map["thumbnail"]
+        brand <- map["brand"]
+        price <- map["price"]
+        quantity <- map["quantity"]
     }
 }

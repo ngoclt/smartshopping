@@ -1,5 +1,5 @@
 //
-//  StoreProductViewController.swift
+//  StoreDetailViewController.swift
 //  SmartShopping
 //
 //  Created by Ngoc LE on 6/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreProductViewController: BaseViewController {
+class StoreDetailViewController: BaseViewController {
     
     @IBOutlet fileprivate var collectionView: UICollectionView! {
         didSet {
@@ -16,53 +16,53 @@ class StoreProductViewController: BaseViewController {
         }
     }
     
-    var dataSourceItems: [String] = []
+    var store: Store!
+    var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Category"
-        
-        prepareDataSourceItems()
-        prepareCollectionView()
+        navigationItem.setTitle(title: store.name, subtitle: store.address)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        collectionView.reloadData()
+        refreshData()
     }
 }
 
-extension StoreProductViewController {
-    fileprivate func prepareDataSourceItems() {
-        let data = ["meditation.jpg", "yoga.jpg", "surf.jpg"]
-
-        
-    }
-    
-    fileprivate func prepareCollectionView() {
-//        let collectionViewLayout = collectionView.collectionViewLayout as! UICollectionViewLayout
+extension StoreDetailViewController {
+    fileprivate func refreshData() {
+        let viewModel = StoreViewModel()
+        viewModel.fetchProduct(storeId: store.objectId) { [weak self] response, error in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            if let products = response?.results {
+                strongSelf.products = products
+                strongSelf.collectionView.reloadData()
+            } else {
+                log.error(error)
+            }
+        }
     }
 }
 
-extension StoreProductViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+extension StoreDetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSourceItems.count
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+        cell.data = products[indexPath.item]
         return cell
     }
 }
 
-extension StoreProductViewController: UICollectionViewDelegate {
+extension StoreDetailViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
