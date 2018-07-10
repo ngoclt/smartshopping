@@ -1,14 +1,14 @@
 //
-//  StoreListViewController.swift
+//  NearbyViewController.swift
 //  SmartShopping
 //
-//  Created by Ngoc LE on 11/24/17.
-//  Copyright © 2017 Ngoc LE. All rights reserved.
+//  Created by Ngoc LE on 7/10/18.
+//  Copyright © 2018 Ngoc LE. All rights reserved.
 //
 
 import UIKit
 
-class StoreListViewController: BaseViewController {
+class NearbyViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,18 +19,18 @@ class StoreListViewController: BaseViewController {
             tableView.reloadData()
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        title = "Stores"
+        title = "Nearby"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,14 +39,14 @@ class StoreListViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController = segue.destination as? StoreDetailViewController,
             let store = selectedStore else {
-            return
+                return
         }
         
         viewController.store = store
     }
 }
 
-extension StoreListViewController {
+extension NearbyViewController {
     func refreshData() {
         let viewModel = StoreViewModel()
         viewModel.fetchList { [weak self] response, error in
@@ -63,7 +63,7 @@ extension StoreListViewController {
     }
 }
 
-extension StoreListViewController: UITableViewDataSource {
+extension NearbyViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceItems.count
@@ -76,9 +76,9 @@ extension StoreListViewController: UITableViewDataSource {
     }
 }
 
-extension StoreListViewController: UITableViewDelegate {
+extension NearbyViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedStore = dataSourceItems[indexPath.row]
-        self.performSegue(withIdentifier: "OpenStoreDetailFromList", sender: self)
+        self.performSegue(withIdentifier: "OpenStoreDetailFromNearby", sender: self)
     }
 }

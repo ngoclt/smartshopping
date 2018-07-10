@@ -10,6 +10,10 @@ import UIKit
 
 class StoreDetailViewController: BaseViewController {
     
+    static let PRODUCT_ITEM_MARGIN: CGFloat = 10
+    static let NUMBER_ITEMS_PER_ROW: Int = 2
+    static let PRODUCT_ITEM_HEIGHT: CGFloat = 170
+    
     @IBOutlet fileprivate var collectionView: UICollectionView! {
         didSet {
             
@@ -27,11 +31,22 @@ class StoreDetailViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        prepareCollectionViewLayout()
         refreshData()
     }
 }
 
 extension StoreDetailViewController {
+    
+    fileprivate func prepareCollectionViewLayout() {
+        let collectionViewLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let itemWidth = (collectionView.bounds.width -
+            StoreDetailViewController.PRODUCT_ITEM_MARGIN * CGFloat(StoreDetailViewController.NUMBER_ITEMS_PER_ROW + 1)) /  CGFloat(StoreDetailViewController.NUMBER_ITEMS_PER_ROW)
+        collectionViewLayout.itemSize = CGSize(width: itemWidth, height: StoreDetailViewController.PRODUCT_ITEM_HEIGHT)
+        collectionViewLayout.minimumLineSpacing = StoreDetailViewController.PRODUCT_ITEM_MARGIN
+        collectionViewLayout.minimumInteritemSpacing = StoreDetailViewController.PRODUCT_ITEM_MARGIN
+    }
+    
     fileprivate func refreshData() {
         let viewModel = StoreViewModel()
         viewModel.fetchProduct(storeId: store.objectId) { [weak self] response, error in

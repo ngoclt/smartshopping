@@ -36,5 +36,7 @@ class StoreTableViewCell: UITableViewCell {
     
     @IBAction fileprivate func didTapBTNLike(_ sender: UIButton) {
         
-    }}
+    }
+    
+}
 

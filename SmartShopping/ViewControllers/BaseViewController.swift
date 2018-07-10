@@ -18,6 +18,9 @@ class BaseViewController: UIViewController {
     private func setupNavigationBarStyle() {
         navigationController?.navigationBar.setBackgroundImage(UIImage.image(from: .white), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage.image(from: .lightGray)
+        if let topItem = self.navigationController?.navigationBar.topItem {
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
     }
 }
 
