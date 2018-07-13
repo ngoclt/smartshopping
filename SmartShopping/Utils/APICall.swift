@@ -23,7 +23,7 @@ struct APIPath {
 
 struct Endpoint {
     
-    static let baseUrl = "http://0.0.0.0:8000/api/v1/"
+    static let baseUrl = "http://programmer.life:8000/api/v1/"
     
     var url: String
     var method: HTTPMethod

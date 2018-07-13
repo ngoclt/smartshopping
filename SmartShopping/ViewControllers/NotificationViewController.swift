@@ -35,6 +35,6 @@ extension NotificationViewController: UITableViewDataSource {
 
 extension NotificationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "OpenNotificationPromotions", sender: self)
+        
     }
 }

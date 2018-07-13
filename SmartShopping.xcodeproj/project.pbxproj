@@ -53,6 +53,8 @@
 		4C97B87B20CD80AC00D681F9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97B87A20CD80AC00D681F9 /* CategoryCollectionViewCell.swift */; };
 		4CDB55FB20F4C400007633F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FA20F4C400007633F9 /* ProfileViewController.swift */; };
 		4CDB55FD20F4C4B7007633F9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FC20F4C4B7007633F9 /* TabBarController.swift */; };
+		4CDB55FF20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */; };
+		4CDB560120F8E16E007633F9 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */; };
 		4CF8A35B20F4AA880002BA82 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8A35A20F4AA880002BA82 /* NearbyViewController.swift */; };
 		4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */; };
 		63897FAA2B0A79C86F460713 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */; };
@@ -132,6 +134,8 @@
 		4C97B87A20CD80AC00D681F9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CDB55FA20F4C400007633F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4CDB55FC20F4C4B7007633F9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CF8A35A20F4AA880002BA82 /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +307,8 @@
 				4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */,
 				4C6D402C20E66DD900432BD0 /* DesignableView.swift */,
 				4C2451BE20EE95930030DA97 /* RoundedImageView.swift */,
+				4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */,
+				4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDB560120F8E16E007633F9 /* InterestCollectionViewCell.swift in Sources */,
 				4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */,
 				4C97B87B20CD80AC00D681F9 /* CategoryCollectionViewCell.swift in Sources */,
 				4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */,
@@ -591,6 +598,7 @@
 				4C97B87720CD803500D681F9 /* StoreDetailViewController.swift in Sources */,
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
 				4C0D6A2B1FC8090400E25DFD /* StoreListViewController.swift in Sources */,
+				4CDB55FF20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift in Sources */,
 				4C40A87E20DAB30D00962C28 /* Category.swift in Sources */,
 				4C54532C1FCB086E00A25ED1 /* Extensions.swift in Sources */,
 				4C0D6A291FC8090400E25DFD /* AppDelegate.swift in Sources */,
