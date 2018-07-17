@@ -13,7 +13,7 @@ class NotificationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Notifications"
+        title = "Notifications"
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,5 +36,12 @@ extension NotificationViewController: UITableViewDataSource {
 extension NotificationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension NotificationViewController {
+    @IBAction fileprivate func didTapBTNLogin(_ sender: UIButton) {
+        log.info("Login from Notification")
+        tabBarController?.performSegue(withIdentifier: "OpenLogin", sender: self)
     }
 }

@@ -49,12 +49,15 @@
 		4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */; };
 		4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */; };
 		4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */; };
+		4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91298B20FE07A400CD48D4 /* SignupViewController.swift */; };
 		4C97B87720CD803500D681F9 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */; };
 		4C97B87B20CD80AC00D681F9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97B87A20CD80AC00D681F9 /* CategoryCollectionViewCell.swift */; };
 		4CDB55FB20F4C400007633F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FA20F4C400007633F9 /* ProfileViewController.swift */; };
 		4CDB55FD20F4C4B7007633F9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FC20F4C4B7007633F9 /* TabBarController.swift */; };
 		4CDB55FF20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */; };
 		4CDB560120F8E16E007633F9 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */; };
+		4CDB560320F90EF9007633F9 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB560220F90EF9007633F9 /* UnderlineTextField.swift */; };
+		4CDB560520F91A50007633F9 /* Shopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB560420F91A50007633F9 /* Shopper.swift */; };
 		4CF8A35B20F4AA880002BA82 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8A35A20F4AA880002BA82 /* NearbyViewController.swift */; };
 		4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */; };
 		63897FAA2B0A79C86F460713 /* Pods_SmartShopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */; };
@@ -130,12 +133,15 @@
 		4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C91298B20FE07A400CD48D4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
 		4C97B87A20CD80AC00D681F9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CDB55FA20F4C400007633F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4CDB55FC20F4C4B7007633F9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CDB560220F90EF9007633F9 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		4CDB560420F91A50007633F9 /* Shopper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopper.swift; sourceTree = "<group>"; };
 		4CF8A35A20F4AA880002BA82 /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		4CFA965D1FC9665A00A44E6D /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		5983C33B2F59FC85B3031BA5 /* Pods_SmartShopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartShopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +245,7 @@
 				4C0D6A581FC809D000E25DFD /* BaseViewController.swift */,
 				4C0D6A2A1FC8090400E25DFD /* StoreListViewController.swift */,
 				4C0D6A561FC809B200E25DFD /* LoginViewController.swift */,
+				4C91298B20FE07A400CD48D4 /* SignupViewController.swift */,
 				4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */,
 				4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */,
 				4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */,
@@ -293,6 +300,7 @@
 				4C40A87F20DAB31600962C28 /* Product.swift */,
 				4C40A88120DAB32100962C28 /* Notification.swift */,
 				4C40A88720DABE8100962C28 /* ResponseList.swift */,
+				4CDB560420F91A50007633F9 /* Shopper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 				4C2451BE20EE95930030DA97 /* RoundedImageView.swift */,
 				4CDB55FE20F8D5AB007633F9 /* ProfileHeaderCollectionViewCell.swift */,
 				4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */,
+				4CDB560220F90EF9007633F9 /* UnderlineTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -585,6 +594,7 @@
 			files = (
 				4CDB560120F8E16E007633F9 /* InterestCollectionViewCell.swift in Sources */,
 				4C7DB4561FC8780D006D0810 /* NotificationTableViewCell.swift in Sources */,
+				4CDB560320F90EF9007633F9 /* UnderlineTextField.swift in Sources */,
 				4C97B87B20CD80AC00D681F9 /* CategoryCollectionViewCell.swift in Sources */,
 				4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */,
 				4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */,
@@ -608,7 +618,9 @@
 				4C40A87C20DAB2FF00962C28 /* Store.swift in Sources */,
 				4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */,
 				4C45711620DA753800104F35 /* Color.swift in Sources */,
+				4CDB560520F91A50007633F9 /* Shopper.swift in Sources */,
 				4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */,
+				4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */,
 				4C7DB4541FC877DB006D0810 /* ProductCollectionViewCell.swift in Sources */,
 				4CF8A35B20F4AA880002BA82 /* NearbyViewController.swift in Sources */,
 				4C40A88020DAB31600962C28 /* Product.swift in Sources */,

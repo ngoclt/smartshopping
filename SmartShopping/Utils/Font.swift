@@ -23,6 +23,8 @@ enum FontBook: String {
     case robotoThin             = "Roboto-Thin"
     case robotoThinItalic       = "Roboto-ThinItalic"
     
+    case awesomeSolid           = "FontAwesome5FreeSolid"
+    
     func of(size: CGFloat) -> UIFont {
         return UIFont(name: self.rawValue, size: size)!
     }

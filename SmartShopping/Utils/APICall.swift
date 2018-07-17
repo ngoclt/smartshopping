@@ -15,6 +15,7 @@ import ObjectMapper
 struct APIPath {
     static let storePath = "stores/"
     static let productPath = "products/"
+    static let interestPath = "interests/"
     
     static func storeProductPath(id: Int64) -> String {
         return "stores/\(id)/products/"
@@ -29,7 +30,6 @@ struct Endpoint {
     var method: HTTPMethod
     var params: [String: Any]?
     var encoding: ParameterEncoding
-    
     
     init(path: String,
          method: HTTPMethod,
@@ -54,6 +54,9 @@ struct Endpoint {
 }
 
 class APICall {
+    
+    public static var currentUser: Shopper?
+    public static var token: String?
     
     private var request: DataRequest
     
