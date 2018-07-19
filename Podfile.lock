@@ -6,6 +6,13 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - EstimoteSDK (4.27.0)
+  - FTIndicator (1.2.9):
+    - FTIndicator/FTNotificationIndicator (= 1.2.9)
+    - FTIndicator/FTProgressIndicator (= 1.2.9)
+    - FTIndicator/FTToastIndicator (= 1.2.9)
+  - FTIndicator/FTNotificationIndicator (1.2.9)
+  - FTIndicator/FTProgressIndicator (1.2.9)
+  - FTIndicator/FTToastIndicator (1.2.9)
   - ObjectMapper (3.3.0)
   - SwiftyBeaver (1.6.0)
 
@@ -14,6 +21,7 @@ DEPENDENCIES:
   - AlamofireImage
   - AlamofireObjectMapper
   - EstimoteSDK
+  - FTIndicator
   - SwiftyBeaver
 
 SPEC REPOS:
@@ -22,6 +30,7 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireObjectMapper
     - EstimoteSDK
+    - FTIndicator
     - ObjectMapper
     - SwiftyBeaver
 
@@ -30,9 +39,10 @@ SPEC CHECKSUMS:
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   EstimoteSDK: 61935c7fbcb9fe93b97b0360351aef66fb1c338d
+  FTIndicator: f7f071fd159e5befa1d040a9ef2e3ab53fa9322c
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
 
-PODFILE CHECKSUM: 7bac2e81cd8e9590401064d3db9373606da4b426
+PODFILE CHECKSUM: cd7124dcb285560c8a4af518c76c9d5af972f201
 
 COCOAPODS: 1.5.3

@@ -10,9 +10,9 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
-    @IBOutlet fileprivate var tfEmail: UnderlineTextField! {
+    @IBOutlet fileprivate var tfUsername: UnderlineTextField! {
         didSet {
-            tfEmail.clearButtonMode = .whileEditing
+            tfUsername.clearButtonMode = .whileEditing
         }
     }
     @IBOutlet fileprivate var tfPassword: UnderlineTextField! {
@@ -49,17 +49,47 @@ class LoginViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
+    @objc func keyboardWasShown(notification: Notification) {
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset = scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWasHidden(notification: Notification) {
+        scrollView.contentInset = .zero
+    }
+}
+
+// MARK: View Controller Actions
+extension LoginViewController {
     @IBAction fileprivate func didTapBTNLogin(_ sender: UIButton) {
-        tfEmail.resignFirstResponder()
+        tfUsername.resignFirstResponder()
         tfPassword.resignFirstResponder()
         
-        //TODO: Process for login here
-        
-        dismiss(animated: true, completion: nil)
+        showProgress(message: "Logging in...")
+        login { [weak self] error in
+            guard let weakSelf = self else {
+                return
+            }
+            
+            weakSelf.dismissProgress()
+            
+            guard let _ = error else {
+                weakSelf.dismiss(animated: true, completion: nil)
+                return
+            }
+            
+            
+            weakSelf.showToast(AppError.login.localizedDescription)
+        }
     }
     
     @IBAction fileprivate func didTapBTNClose(_ sender: UIButton) {
-        tfEmail.resignFirstResponder()
+        tfUsername.resignFirstResponder()
         tfPassword.resignFirstResponder()
         
         dismiss(animated: true, completion: nil)
@@ -70,16 +100,30 @@ class LoginViewController: BaseViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        tfEmail.resignFirstResponder()
+        tfUsername.resignFirstResponder()
         tfPassword.resignFirstResponder()
     }
-    
-    @objc func keyboardWasShown(notification: Notification) {
-        //TODO: Need to handle displaying the keyboard for small screen.
-    }
-    
-    @objc func keyboardWasHidden(notification: Notification) {
-        //TODO: Need to handle displaying the keyboard for small screen.
+}
+
+extension LoginViewController {
+    fileprivate func login(completion: @escaping (_ error: NSError?) -> Void) {
+        guard let username = tfUsername.text, let password = tfPassword.text else {
+            completion(AppError.login)
+            return
+        }
+        
+        let userVM = UserViewModel()
+        userVM.login(username: username, password: password) { (token, error) in
+            guard let sessionToken = token else {
+                completion(error)
+                return
+            }
+            
+            let session = APISession(token: sessionToken)
+            APISession.current = session
+            
+            completion(nil)
+        }
     }
 }
 
@@ -87,7 +131,7 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if textField == tfEmail {
+        if textField == tfUsername {
             tfPassword.becomeFirstResponder()
         }
 

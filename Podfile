@@ -12,6 +12,7 @@ target 'SmartShopping' do
     pod 'AlamofireImage'
     pod 'EstimoteSDK'
     pod 'SwiftyBeaver'
+    pod 'FTIndicator'
     
     target 'SmartShoppingTests' do
         inherit! :search_paths

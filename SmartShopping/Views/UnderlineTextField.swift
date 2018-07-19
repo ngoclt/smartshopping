@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 class UnderlineTextField: UITextField {
     
+    static let iconWidth: CGFloat = 30
+    
     @IBInspectable var leftIcon: String! {
         didSet {
             let iconLabel = UILabel()
@@ -19,7 +21,7 @@ class UnderlineTextField: UITextField {
             iconLabel.font = FontBook.awesomeSolid.of(size: 20)
             iconLabel.sizeToFit()
             var frame = iconLabel.frame
-            frame.size.width = frame.size.width + leftPadding
+            frame.size.width = UnderlineTextField.iconWidth + leftPadding
             iconLabel.frame = frame
             leftView = iconLabel
         }

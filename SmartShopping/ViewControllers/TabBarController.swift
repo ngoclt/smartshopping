@@ -17,8 +17,6 @@ class TabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    
 }
 
 extension TabBarController: UITabBarControllerDelegate {
@@ -28,7 +26,7 @@ extension TabBarController: UITabBarControllerDelegate {
             return false
         }
         
-        if index == 3 && APICall.currentUser == nil {
+        if index == 3 && APISession.current == nil {
             performSegue(withIdentifier: "OpenLogin", sender: self)
             return false
         }

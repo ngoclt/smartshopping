@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FTIndicator
 
 class BaseViewController: UIViewController {
     
@@ -33,5 +34,23 @@ extension BaseViewController {
     
     @objc private func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension BaseViewController {
+    func showProgress(message: String) {
+        FTIndicator.showProgress(withMessage: message, userInteractionEnable: true)
+    }
+    
+    func dismissProgress() {
+        FTIndicator.dismissProgress()
+    }
+    
+    func showToast(_ message: String) {
+        FTIndicator.showError(withMessage: message)
+    }
+    
+    func dismissToast() {
+        FTIndicator.dismissToast()
     }
 }

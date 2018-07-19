@@ -10,10 +10,18 @@ import UIKit
 
 class NotificationViewController: BaseViewController {
     
+    @IBOutlet var btnLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         title = "Notifications"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        btnLogin.isHidden = (APISession.current != nil)
     }
     
     override func didReceiveMemoryWarning() {
