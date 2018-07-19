@@ -10,6 +10,8 @@ import Foundation
 
 class UserViewModel {
     
+    static var currentUser: Shopper?
+    
     init() {
         
     }
@@ -24,6 +26,15 @@ class UserViewModel {
                 return
             }
             callback(token, error)
+        }
+    }
+    
+    func fetchLoggedInShopper(callback: @escaping (Shopper?, NSError?) -> Void) {
+        let endpoint = Endpoint(path: APIPath.me, method: .get)
+        let call = APICall(endpoint)
+        call.requestObject(type: Shopper.self) { result, error in
+            UserViewModel.currentUser = result
+            callback(result, error)
         }
     }
 }

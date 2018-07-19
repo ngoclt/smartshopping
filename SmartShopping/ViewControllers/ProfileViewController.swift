@@ -46,6 +46,15 @@ extension ProfileViewController {
     }
     
     fileprivate func refreshData() {
+        let userVM = UserViewModel()
+        userVM.fetchLoggedInShopper { (result, error) in
+            if let _ = error {
+                self.showErrorToast(error!.localizedDescription)
+            } else {
+                self.collectionView.reloadData()
+            }
+        }
+        
     }
 }
 
@@ -68,11 +77,11 @@ extension ProfileViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderCollectionViewCell", for: indexPath)
-            return headerView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderCollectionViewCell", for: indexPath) as! ProfileHeaderCollectionViewCell
+        if let shopper = UserViewModel.currentUser {
+            headerView.shopper = shopper
         }
         
-        return UICollectionReusableView()
+        return headerView
     }
 }

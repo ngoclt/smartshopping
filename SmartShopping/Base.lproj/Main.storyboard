@@ -589,7 +589,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="yvG-9G-iSA"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ngoclt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amh-pJ-b7Y">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amh-pJ-b7Y">
                                                     <rect key="frame" x="8" y="99" width="359" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="AD3-a8-N9Z"/>
@@ -598,7 +598,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ngoclt@outlook.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZX-Pn-fZy">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZX-Pn-fZy">
                                                     <rect key="frame" x="8" y="82" width="359" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="gpg-n2-kcA"/>
@@ -607,7 +607,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nick Happer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-N0-c9J">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-N0-c9J">
                                                     <rect key="frame" x="8" y="59" width="359" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="tqm-2V-mSn"/>
@@ -616,16 +616,23 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-Ss-8Lk">
+                                                    <rect key="frame" x="162" y="8" width="50" height="50"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.1617099558" green="0.72161828859999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="amh-pJ-b7Y" firstAttribute="leading" secondItem="mH2-ng-Kuj" secondAttribute="leading" constant="8" id="1ff-oR-qh8"/>
                                                 <constraint firstAttribute="trailing" secondItem="iZX-Pn-fZy" secondAttribute="trailing" constant="8" id="2nS-pO-tZG"/>
                                                 <constraint firstAttribute="trailing" secondItem="b9K-N0-c9J" secondAttribute="trailing" constant="8" id="5rb-Ms-2rf"/>
+                                                <constraint firstItem="2iL-Ss-8Lk" firstAttribute="bottom" secondItem="pnp-Qf-IrS" secondAttribute="bottom" id="CI7-rN-9lo"/>
                                                 <constraint firstItem="iZX-Pn-fZy" firstAttribute="top" secondItem="b9K-N0-c9J" secondAttribute="bottom" constant="2" id="EFu-gT-9bJ"/>
+                                                <constraint firstItem="2iL-Ss-8Lk" firstAttribute="leading" secondItem="pnp-Qf-IrS" secondAttribute="leading" id="HPa-4v-Fja"/>
                                                 <constraint firstItem="amh-pJ-b7Y" firstAttribute="top" secondItem="iZX-Pn-fZy" secondAttribute="bottom" constant="4" id="MoI-qN-IgI"/>
+                                                <constraint firstItem="2iL-Ss-8Lk" firstAttribute="trailing" secondItem="pnp-Qf-IrS" secondAttribute="trailing" id="SNm-BD-HhB"/>
                                                 <constraint firstItem="pnp-Qf-IrS" firstAttribute="centerX" secondItem="mH2-ng-Kuj" secondAttribute="centerX" id="WuZ-jC-Msx"/>
                                                 <constraint firstItem="iZX-Pn-fZy" firstAttribute="leading" secondItem="mH2-ng-Kuj" secondAttribute="leading" constant="8" id="c1B-ju-ISo"/>
+                                                <constraint firstItem="2iL-Ss-8Lk" firstAttribute="top" secondItem="pnp-Qf-IrS" secondAttribute="top" id="ehi-xE-Xh6"/>
                                                 <constraint firstItem="pnp-Qf-IrS" firstAttribute="top" secondItem="mH2-ng-Kuj" secondAttribute="top" constant="8" id="gXe-c2-QKV"/>
                                                 <constraint firstAttribute="trailing" secondItem="amh-pJ-b7Y" secondAttribute="trailing" constant="8" id="ghi-QP-CCI"/>
                                                 <constraint firstItem="b9K-N0-c9J" firstAttribute="leading" secondItem="mH2-ng-Kuj" secondAttribute="leading" constant="8" id="jYY-HH-1SY"/>
@@ -639,6 +646,12 @@
                                         <constraint firstItem="mH2-ng-Kuj" firstAttribute="top" secondItem="KtP-uE-bEs" secondAttribute="top" id="i0n-qI-VgV"/>
                                         <constraint firstItem="mH2-ng-Kuj" firstAttribute="leading" secondItem="KtP-uE-bEs" secondAttribute="leading" id="tJk-U1-mpx"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="ivAvatar" destination="pnp-Qf-IrS" id="NES-Qa-3Mq"/>
+                                        <outlet property="lblEmail" destination="iZX-Pn-fZy" id="QSo-Bu-9Zy"/>
+                                        <outlet property="lblName" destination="b9K-N0-c9J" id="4bh-qZ-XEe"/>
+                                        <outlet property="lblUsername" destination="amh-pJ-b7Y" id="7T7-hY-QTV"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="esf-uI-q3X" id="Pbd-Ww-5Ir"/>

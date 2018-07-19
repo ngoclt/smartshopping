@@ -14,10 +14,11 @@ class OnboardingViewController: BaseViewController {
         super.viewDidLoad()
         
         if APISession.loadCache() {
-            
+            let userVM = UserViewModel()
+            userVM.fetchLoggedInShopper { (_, _) in
+                self.openApplication()
+            }
         }
-        
-        openApplication()
     }
     
     func openApplication() {

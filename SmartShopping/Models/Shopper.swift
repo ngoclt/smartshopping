@@ -12,11 +12,25 @@ import ObjectMapper
 class Shopper: Mappable {
     
     var objectId: Int64
-    var name: String
+    var username: String
+    var firstName: String
+    var lastName: String
+    var email: String
+    var avatar: String
+    var gender: String
+    
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
     
     init() {
         objectId = 0
-        name = ""
+        username = ""
+        firstName = ""
+        lastName = ""
+        email = ""
+        avatar = ""
+        gender = ""
     }
     
     required convenience init?(map: Map) {
@@ -25,6 +39,11 @@ class Shopper: Mappable {
     
     func mapping(map: Map) {
         objectId <- map["id"]
-        name <- map["name"]
+        username <- map["username"]
+        firstName <- map["first_name"]
+        lastName <- map["last_name"]
+        email <- map["email"]
+        avatar <- map["avatar"]
+        gender <- map["gender"]
     }
 }

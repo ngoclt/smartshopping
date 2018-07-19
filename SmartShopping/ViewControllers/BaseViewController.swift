@@ -46,11 +46,7 @@ extension BaseViewController {
         FTIndicator.dismissProgress()
     }
     
-    func showToast(_ message: String) {
+    func showErrorToast(_ message: String) {
         FTIndicator.showError(withMessage: message)
-    }
-    
-    func dismissToast() {
-        FTIndicator.dismissToast()
     }
 }

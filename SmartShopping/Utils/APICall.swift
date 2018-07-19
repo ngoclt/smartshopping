@@ -14,6 +14,7 @@ import ObjectMapper
 
 struct APIPath {
     static let login = "rest-auth/login/"
+    static let me = "shoppers/me/"
     static let storePath = "stores/"
     static let productPath = "products/"
     static let interestPath = "interests/"
@@ -63,7 +64,6 @@ class APISession {
     }
     
     var token: String
-    var user: Shopper?
     
     init(token: String) {
         self.token = token
