@@ -21,6 +21,8 @@
 		4C2451BF20EE95930030DA97 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2451BE20EE95930030DA97 /* RoundedImageView.swift */; };
 		4C25F1B02100ED86009FE425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1AF2100ED86009FE425 /* Constants.swift */; };
 		4C25F1B2210103FE009FE425 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1B1210103FE009FE425 /* OnboardingViewController.swift */; };
+		4C25F1B421011B4B009FE425 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1B321011B4B009FE425 /* Interest.swift */; };
+		4C25F1B621011EA7009FE425 /* Likable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1B521011EA7009FE425 /* Likable.swift */; };
 		4C3273D720E40AC0008A0F0E /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CB20E40ABF008A0F0E /* Roboto-LightItalic.ttf */; };
 		4C3273D820E40AC0008A0F0E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CC20E40ABF008A0F0E /* Roboto-Bold.ttf */; };
 		4C3273D920E40AC0008A0F0E /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CD20E40ABF008A0F0E /* Roboto-Italic.ttf */; };
@@ -107,6 +109,8 @@
 		4C2451BE20EE95930030DA97 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		4C25F1AF2100ED86009FE425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C25F1B1210103FE009FE425 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4C25F1B321011B4B009FE425 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		4C25F1B521011EA7009FE425 /* Likable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Likable.swift; sourceTree = "<group>"; };
 		4C3273CB20E40ABF008A0F0E /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		4C3273CC20E40ABF008A0F0E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		4C3273CD20E40ABF008A0F0E /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 				4C40A88120DAB32100962C28 /* Notification.swift */,
 				4C40A88720DABE8100962C28 /* ResponseList.swift */,
 				4CDB560420F91A50007633F9 /* Shopper.swift */,
+				4C25F1B321011B4B009FE425 /* Interest.swift */,
+				4C25F1B521011EA7009FE425 /* Likable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -608,6 +614,7 @@
 				4CDB560320F90EF9007633F9 /* UnderlineTextField.swift in Sources */,
 				4C97B87B20CD80AC00D681F9 /* CategoryCollectionViewCell.swift in Sources */,
 				4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */,
+				4C25F1B421011B4B009FE425 /* Interest.swift in Sources */,
 				4C0D6A571FC809B200E25DFD /* LoginViewController.swift in Sources */,
 				4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */,
 				4CFA965E1FC9665A00A44E6D /* NotificationManager.swift in Sources */,
@@ -631,6 +638,7 @@
 				4C45711620DA753800104F35 /* Color.swift in Sources */,
 				4CDB560520F91A50007633F9 /* Shopper.swift in Sources */,
 				4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */,
+				4C25F1B621011EA7009FE425 /* Likable.swift in Sources */,
 				4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */,
 				4C7DB4541FC877DB006D0810 /* ProductCollectionViewCell.swift in Sources */,
 				4CF8A35B20F4AA880002BA82 /* NearbyViewController.swift in Sources */,

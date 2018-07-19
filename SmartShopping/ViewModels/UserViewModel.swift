@@ -37,4 +37,12 @@ class UserViewModel {
             callback(result, error)
         }
     }
+    
+    func fetchInterests(callback: @escaping (ResponseList<Interest>?, NSError?) -> Void) {
+        let endpoint = Endpoint(path: APIPath.interestPath, method: .get)
+        let call = APICall(endpoint)
+        call.requestObject(type: ResponseList<Interest>.self) { (result, error) in
+            callback(result, error)
+        }
+    }
 }

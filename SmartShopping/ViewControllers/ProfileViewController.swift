@@ -13,13 +13,9 @@ class ProfileViewController: BaseViewController {
     static let PRODUCT_ITEM_MARGIN: CGFloat = 10
     static let NUMBER_ITEMS_PER_ROW: Int = 3
     
-    @IBOutlet fileprivate var collectionView: UICollectionView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet fileprivate var collectionView: UICollectionView!
     
-    var products: [Product] = []
+    var interests: [Interest] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,18 +50,31 @@ extension ProfileViewController {
                 self.collectionView.reloadData()
             }
         }
-        
+        userVM.fetchInterests { response, error in
+            if let _ = error {
+                self.showErrorToast(error!.localizedDescription)
+            } else if let interests = response?.results {
+                self.interests = interests
+            }
+            self.collectionView.reloadData()
+        }
     }
 }
 
 extension ProfileViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return interests.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestCollectionViewCell", for: indexPath) as! InterestCollectionViewCell
+        let interest = interests[indexPath.item]
+        if let product = interest.product {
+            cell.item = product
+        } else if let category = interest.category {
+            cell.item = category
+        }
         return cell
     }
 }

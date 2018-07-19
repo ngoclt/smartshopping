@@ -11,6 +11,8 @@ import UIKit
 enum Color {
     
     case main
+    case liked
+    case unliked
     case theme
     case border
     case shadow
@@ -41,6 +43,10 @@ extension Color {
         switch self {
         case .main:
             instanceColor = UIColor(hexString: "#025454")
+        case .liked:
+            instanceColor = UIColor(hexString: "#D80721")
+        case .unliked:
+            instanceColor = UIColor(hexString: "#AAAAAA")
         case .border:
             instanceColor = UIColor(hexString: "#333333")
         case .theme:

@@ -57,7 +57,7 @@ extension StoreListViewController {
             if let stores = response?.results {
                 strongSelf.dataSourceItems = stores
             } else {
-                log.error(error)
+                strongSelf.showErrorToast(error!.localizedDescription)
             }
         }
     }

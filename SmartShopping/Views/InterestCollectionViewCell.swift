@@ -10,4 +10,22 @@ import UIKit
 
 class InterestCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var ivThumb: UIImageView!
+    @IBOutlet weak var btnLike: UIButton!
+    
+    var interestId: Int64 = 0
+    var item: Likable! {
+        didSet {
+            lblTitle.text = item.title()
+            ivThumb.setImageURL(item.imageThumbnail())
+            
+            let color = item.status() ? Color.liked : Color.unliked
+            btnLike.setTitleColor(color.value, for: .normal)
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

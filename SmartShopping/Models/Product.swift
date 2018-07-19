@@ -19,6 +19,7 @@ class Product: Mappable {
     var quantity: Int
     var image: String
     var thumbnail: String
+    var isLiked: Bool
     
     init() {
         self.objectId = ""
@@ -29,6 +30,7 @@ class Product: Mappable {
         self.brand = ""
         self.price = ""
         self.quantity = 0
+        self.isLiked = false
     }
     
     required convenience init?(map: Map) {
@@ -44,5 +46,30 @@ class Product: Mappable {
         brand <- map["brand"]
         price <- map["price"]
         quantity <- map["quantity"]
+        isLiked <- map["is_liked"]
     }
 }
+
+extension Product: Likable {
+    func imageThumbnail() -> String {
+        return thumbnail
+    }
+    
+    func title() -> String {
+        return name
+    }
+    
+    func status() -> Bool {
+        return isLiked
+    }
+    
+    func like() {
+        isLiked = true
+    }
+    
+    func unlike() {
+        isLiked = false
+    }
+}
+
+
