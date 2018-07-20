@@ -12,12 +12,18 @@ class OnboardingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if APISession.loadCache() {
             let userVM = UserViewModel()
             userVM.fetchLoggedInShopper { (_, _) in
                 self.openApplication()
             }
+        } else {
+            openApplication()
         }
     }
     

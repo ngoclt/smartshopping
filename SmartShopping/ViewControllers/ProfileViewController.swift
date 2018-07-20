@@ -28,6 +28,13 @@ class ProfileViewController: BaseViewController {
         prepareCollectionViewLayout()
         refreshData()
     }
+    
+    @IBAction fileprivate func didTapBTNLogout(_ sender: UIButton) {
+        let userVM = UserViewModel()
+        userVM.logout { error in
+            self.navigationController?.tabBarController?.navigationController?.popViewController(animated: true)
+        }
+    }
 }
 
 extension ProfileViewController {

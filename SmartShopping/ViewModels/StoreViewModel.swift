@@ -15,7 +15,7 @@ class StoreViewModel {
     }
     
     func fetchList(_ callback: @escaping (ResponseList<Store>?, NSError?) -> Void) {
-        let endpoint = Endpoint(path: APIPath.storePath, method: .get)
+        let endpoint = Endpoint(path: APIPath.stores, method: .get)
         let call = APICall(endpoint)
         call.requestObject(type: ResponseList<Store>.self) { result, error in
             callback(result, error)
@@ -27,7 +27,7 @@ class StoreViewModel {
     }
     
     func fetchProduct(storeId: Int64, callback: @escaping (ResponseList<Product>?, NSError?) -> Void) {
-        let endpoint = Endpoint(path: APIPath.storeProductPath(id: storeId), method: .get)
+        let endpoint = Endpoint(path: APIPath.storeProduct(id: storeId), method: .get)
         
         let call = APICall(endpoint)
         call.requestObject(type: ResponseList<Product>.self) { result, error in

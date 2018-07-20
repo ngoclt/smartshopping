@@ -14,12 +14,13 @@ import ObjectMapper
 
 struct APIPath {
     static let login = "rest-auth/login/"
+    static let logout = "rest-auth/logout"
     static let me = "shoppers/me/"
-    static let storePath = "stores/"
-    static let productPath = "products/"
-    static let interestPath = "interests/"
+    static let stores = "stores/"
+    static let products = "products/"
+    static let interests = "interests/"
     
-    static func storeProductPath(id: Int64) -> String {
+    static func storeProduct(id: Int64) -> String {
         return "stores/\(id)/products/"
     }
 }
@@ -59,7 +60,11 @@ class APISession {
     
     static var current: APISession? {
         didSet {
-            current?.save()
+            if let session = current {
+                UserDefaults.standard.set(session.token, forKey: "SessionID")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "SessionID")
+            }
         }
     }
     
@@ -67,14 +72,6 @@ class APISession {
     
     init(token: String) {
         self.token = token
-    }
-    
-    func save() {
-        UserDefaults.standard.set(token, forKey: "SessionID")
-    }
-    
-    func clear() {
-        UserDefaults.standard.removeObject(forKey: "SessionID")
     }
     
     static func loadCache() -> Bool {

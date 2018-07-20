@@ -78,10 +78,10 @@
                                                             <rect key="frame" x="10" y="165" width="335" height="39"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-Cg-dh0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="39"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="39"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H &amp; M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pe-fa-C32">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="tgO-Kn-wtK"/>
                                                                             </constraints>
@@ -90,26 +90,13 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hämeenkatu 11, 33100 Tampere" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-dP-tVN">
-                                                                            <rect key="frame" x="0.0" y="24" width="280" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="24" width="335" height="15"/>
                                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-Yi-bxu">
-                                                                    <rect key="frame" x="280" y="0.0" width="55" height="39"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="55" id="wRO-eL-Hs8"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="30"/>
-                                                                    <state key="normal" title="">
-                                                                        <color key="titleColor" red="0.84667837347476005" green="0.026076990709555135" blue="0.12942276373228651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    </state>
-                                                                    <connections>
-                                                                        <action selector="didTapBTNLike:" destination="chd-DQ-Ghv" eventType="touchUpInside" id="Tuw-w3-oeq"/>
-                                                                    </connections>
-                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="39" id="Sid-xe-7XF"/>
@@ -138,7 +125,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="btnFavorite" destination="gk3-Yi-bxu" id="s7S-wQ-vb4"/>
                                             <outlet property="ivThumb" destination="qM9-Aa-TKU" id="1Dl-tT-oWF"/>
                                             <outlet property="lblAddress" destination="Qs6-dP-tVN" id="Sjp-29-Ela"/>
                                             <outlet property="lblName" destination="1pe-fa-C32" id="GUy-ue-hOG"/>
@@ -676,7 +662,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EOM-Ch-c9S"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lCA-1L-Jtx"/>
+                    <navigationItem key="navigationItem" id="lCA-1L-Jtx">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="l9i-7F-1mO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8gZ-d0-WN6">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didTapBTNLogout:" destination="esf-uI-q3X" eventType="touchUpInside" id="n87-he-9Zf"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="biL-jd-3KL" id="COt-1o-hBf"/>
                     </connections>
@@ -794,7 +792,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.1617099558" green="0.72161828859999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.16078431372549018" green="0.72156862745098038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapBTNLogin:" destination="SF0-op-Lqd" eventType="touchUpInside" id="pFi-4O-u1b"/>
@@ -913,10 +911,10 @@
                                                             <rect key="frame" x="10" y="165" width="335" height="39"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-2C-6uy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="39"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="39"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H &amp; M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-JX-Y2n">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="5o6-G1-273"/>
                                                                             </constraints>
@@ -925,26 +923,13 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hämeenkatu 11, 33100 Tampere" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvY-h1-Rlj">
-                                                                            <rect key="frame" x="0.0" y="24" width="280" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="24" width="335" height="15"/>
                                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U61-20-a3c">
-                                                                    <rect key="frame" x="280" y="0.0" width="55" height="39"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="55" id="1de-Xu-ugt"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="30"/>
-                                                                    <state key="normal" title="">
-                                                                        <color key="titleColor" red="0.84667837349999997" green="0.026076990710000001" blue="0.1294227637" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    </state>
-                                                                    <connections>
-                                                                        <action selector="didTapBTNLike:" destination="egI-1W-sZz" eventType="touchUpInside" id="4Iy-Vx-TK3"/>
-                                                                    </connections>
-                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="39" id="tli-Wz-df1"/>
@@ -973,7 +958,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="btnFavorite" destination="U61-20-a3c" id="DsE-co-yeh"/>
                                             <outlet property="ivThumb" destination="LqN-DF-39V" id="tEQ-UZ-bAA"/>
                                             <outlet property="lblAddress" destination="XvY-h1-Rlj" id="ZQi-Dl-Ehy"/>
                                             <outlet property="lblName" destination="PRA-JX-Y2n" id="jTB-v8-Jcb"/>

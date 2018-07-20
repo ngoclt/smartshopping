@@ -113,16 +113,8 @@ extension LoginViewController {
         }
         
         let userVM = UserViewModel()
-        userVM.login(username: username, password: password) { (token, error) in
-            guard let sessionToken = token else {
-                completion(error)
-                return
-            }
-            
-            let session = APISession(token: sessionToken)
-            APISession.current = session
-            
-            completion(nil)
+        userVM.login(username: username, password: password) { (session, error) in
+            completion(error)
         }
     }
 }
