@@ -19,6 +19,7 @@ struct APIPath {
     static let stores = "stores/"
     static let products = "products/"
     static let interests = "interests/"
+    static let notifications = "notifications/"
     
     static func storeProduct(id: Int64) -> String {
         return "stores/\(id)/products/"

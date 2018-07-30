@@ -13,6 +13,7 @@ class StoreListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     fileprivate var selectedStore: Store?
+    fileprivate let viewModel = StoreViewModel()
     
     var dataSourceItems: [Store] = [] {
         didSet {
@@ -48,7 +49,8 @@ class StoreListViewController: BaseViewController {
 
 extension StoreListViewController {
     func refreshData() {
-        let viewModel = StoreViewModel()
+        showProgress(message: "Loading")
+        
         viewModel.fetchList { [weak self] response, error in
             guard let strongSelf = self else {
                 return
@@ -57,8 +59,10 @@ extension StoreListViewController {
             if let stores = response?.results {
                 strongSelf.dataSourceItems = stores
             } else {
-                strongSelf.showErrorToast(error!.localizedDescription)
+                strongSelf.showErrorToast(error)
             }
+            
+            strongSelf.dismissProgress()
         }
     }
 }

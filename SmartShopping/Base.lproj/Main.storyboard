@@ -19,6 +19,9 @@
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
@@ -691,81 +694,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-af-SeN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-af-SeN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="141" id="K74-9j-A4A" customClass="NotificationTableViewCell" customModule="SmartShopping" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="141" id="K74-9j-A4A" customClass="NotificationTableViewCell" customModule="SmartShopping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K74-9j-A4A" id="dOf-uh-UZh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-Tg-sb3">
-                                                    <rect key="frame" x="73" y="8" width="239" height="124.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn points for all your shopping at H &amp; M Club." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S33-Uy-iIH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="239" height="33"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-SI-H10">
-                                                            <rect key="frame" x="0.0" y="33" width="239" height="91.5"/>
-                                                            <string key="text">The points on your purchases on hm.com are automatically recorded when you make your order. Collect points for your shopping at H &amp; M stores by displaying your H &amp; M Club card at checkout.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDJ-FW-EXA">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="BqG-9l-4hU"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="OH7-hc-fdv"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-s8-bma">
-                                                    <rect key="frame" x="15" y="13" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="mLa-9Z-QJw"/>
-                                                        <constraint firstAttribute="width" constant="50" id="wy9-q2-6Cd"/>
+                                                        <constraint firstAttribute="width" secondItem="JDJ-FW-EXA" secondAttribute="height" multiplier="1:1" id="DHh-22-Z3B"/>
+                                                        <constraint firstAttribute="width" constant="50" id="gAy-Rk-i0S"/>
                                                     </constraints>
                                                     <state key="normal" image="ImagePlaceholder"/>
-                                                    <connections>
-                                                        <action selector="didTapBTNCheck:" destination="K74-9j-A4A" eventType="touchUpInside" id="ECB-c6-vm5"/>
-                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u2-Nm-Tqd">
-                                                    <rect key="frame" x="320" y="18" width="40" height="40"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn points for all your shopping at H &amp; M Club." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S33-Uy-iIH">
+                                                    <rect key="frame" x="68" y="10" width="297" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5N-Ye-CRa" customClass="VerticalTopAlignLabel" customModule="SmartShopping" customModuleProvider="target">
+                                                    <rect key="frame" x="68" y="51" width="169" height="82"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="5vc-ZX-Ulr"/>
-                                                        <constraint firstAttribute="width" constant="40" id="pbo-aI-iTO"/>
+                                                        <constraint firstAttribute="height" constant="82" id="8LM-cE-c4G"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="FontAwesome5FreeSolid" family="Font Awesome 5 Free" pointSize="17"/>
-                                                    <state key="normal" title="">
-                                                        <color key="titleColor" red="0.1617099558" green="0.72161828859999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="didTapBTNThumb:" destination="K74-9j-A4A" eventType="touchUpInside" id="lDZ-2X-ncJ"/>
-                                                    </connections>
-                                                </button>
+                                                    <string key="text">The points on your purchases on hm.com are automatically recorded when you make your order. Collect points for your shopping at H &amp; M stores by displaying your H &amp; M Club card at checkout.</string>
+                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKj-MV-BGm">
+                                                    <rect key="frame" x="245" y="51" width="120" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="H24-vk-1Ig"/>
+                                                        <constraint firstAttribute="height" constant="80" id="zg4-dh-geV"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="trailing" secondItem="dOf-uh-UZh" secondAttribute="trailingMargin" id="BHt-BO-3bZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="PM5-Tg-sb3" secondAttribute="bottom" constant="8" id="F0x-ID-YRX"/>
-                                                <constraint firstItem="PM5-Tg-sb3" firstAttribute="leading" secondItem="A4p-s8-bma" secondAttribute="trailing" constant="8" id="OYb-8Q-NV0"/>
-                                                <constraint firstItem="A4p-s8-bma" firstAttribute="leading" secondItem="dOf-uh-UZh" secondAttribute="leadingMargin" id="Opb-TG-knA"/>
-                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="leading" secondItem="PM5-Tg-sb3" secondAttribute="trailing" constant="8" id="RZJ-eB-vzT"/>
-                                                <constraint firstItem="A4p-s8-bma" firstAttribute="top" secondItem="dOf-uh-UZh" secondAttribute="topMargin" constant="2" id="jWJ-n9-IKo"/>
-                                                <constraint firstItem="3u2-Nm-Tqd" firstAttribute="centerY" secondItem="A4p-s8-bma" secondAttribute="centerY" id="pPk-rJ-pKP"/>
-                                                <constraint firstItem="PM5-Tg-sb3" firstAttribute="top" secondItem="dOf-uh-UZh" secondAttribute="top" constant="8" id="wY0-TZ-MSe"/>
+                                                <constraint firstItem="HKj-MV-BGm" firstAttribute="leading" secondItem="P5N-Ye-CRa" secondAttribute="trailing" constant="8" id="2Vv-Rl-ZMN"/>
+                                                <constraint firstItem="S33-Uy-iIH" firstAttribute="leading" secondItem="JDJ-FW-EXA" secondAttribute="trailing" constant="8" id="2iG-4w-nAl"/>
+                                                <constraint firstItem="JDJ-FW-EXA" firstAttribute="leading" secondItem="dOf-uh-UZh" secondAttribute="leading" constant="10" id="3zj-IH-lCx"/>
+                                                <constraint firstAttribute="trailing" secondItem="HKj-MV-BGm" secondAttribute="trailing" constant="10" id="K0e-pq-aNv"/>
+                                                <constraint firstItem="JDJ-FW-EXA" firstAttribute="top" secondItem="dOf-uh-UZh" secondAttribute="top" constant="10" id="MFT-EO-4yD"/>
+                                                <constraint firstItem="HKj-MV-BGm" firstAttribute="top" secondItem="P5N-Ye-CRa" secondAttribute="top" id="UKG-vb-MYc"/>
+                                                <constraint firstAttribute="trailing" secondItem="S33-Uy-iIH" secondAttribute="trailing" constant="10" id="ZQg-ax-8mM"/>
+                                                <constraint firstItem="S33-Uy-iIH" firstAttribute="top" secondItem="JDJ-FW-EXA" secondAttribute="top" id="cvo-JL-xq9"/>
+                                                <constraint firstItem="P5N-Ye-CRa" firstAttribute="leading" secondItem="JDJ-FW-EXA" secondAttribute="trailing" constant="8" id="fFU-10-PrS"/>
+                                                <constraint firstItem="P5N-Ye-CRa" firstAttribute="top" secondItem="S33-Uy-iIH" secondAttribute="bottom" constant="8" id="qHy-4I-flT"/>
+                                                <constraint firstAttribute="bottom" secondItem="P5N-Ye-CRa" secondAttribute="bottom" constant="8" id="rQR-vD-5WH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="ySj-6N-y4z"/>
+                                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="btnCheck" destination="3u2-Nm-Tqd" id="mYh-Tm-Peo"/>
-                                            <outlet property="btnThumb" destination="A4p-s8-bma" id="fp9-Vx-d1O"/>
-                                            <outlet property="lblDescription" destination="RnS-SI-H10" id="S6t-Ue-yLy"/>
+                                            <outlet property="btnStore" destination="JDJ-FW-EXA" id="GBF-RO-22j"/>
+                                            <outlet property="ivThumb" destination="HKj-MV-BGm" id="es5-dR-Wq9"/>
+                                            <outlet property="lblDescription" destination="P5N-Ye-CRa" id="LKt-nK-OEv"/>
                                             <outlet property="lblTitle" destination="S33-Uy-iIH" id="0Iy-tj-QjK"/>
                                         </connections>
                                     </tableViewCell>
@@ -802,11 +797,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnLogin" destination="H70-1z-Wgr" id="Y3n-8a-Uqe"/>
+                        <outlet property="tableView" destination="RgQ-af-SeN" id="b8U-40-4aB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIA-Ih-9De" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="2062"/>
+            <point key="canvasLocation" x="584.79999999999995" y="2061.3193403298351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ACa-ER-EST">
@@ -887,7 +883,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="88L-mm-VFU">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.97016446570000003" green="0.97016446570000003" blue="0.97016446570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StoreTableViewCell" rowHeight="230" id="egI-1W-sZz" customClass="StoreTableViewCell" customModule="SmartShopping" customModuleProvider="target">

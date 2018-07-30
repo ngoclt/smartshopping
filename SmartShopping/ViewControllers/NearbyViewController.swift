@@ -14,6 +14,7 @@ class NearbyViewController: BaseViewController {
     
     fileprivate var selectedStore: Store?
     
+    let viewModel = StoreViewModel()
     var dataSourceItems: [Store] = [] {
         didSet {
             tableView.reloadData()
@@ -48,7 +49,7 @@ class NearbyViewController: BaseViewController {
 
 extension NearbyViewController {
     func refreshData() {
-        let viewModel = StoreViewModel()
+        showProgress(message: "Loading...")
         viewModel.fetchList { [weak self] response, error in
             guard let strongSelf = self else {
                 return
@@ -57,8 +58,10 @@ extension NearbyViewController {
             if let stores = response?.results {
                 strongSelf.dataSourceItems = stores
             } else {
-                log.error(error)
+                strongSelf.showErrorToast(error)
             }
+            
+            strongSelf.dismissProgress()
         }
     }
 }

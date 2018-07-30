@@ -15,6 +15,7 @@ class ProfileViewController: BaseViewController {
     
     @IBOutlet fileprivate var collectionView: UICollectionView!
     
+    let viewModel = UserViewModel()
     var interests: [Interest] = []
     
     override func viewDidLoad() {
@@ -49,21 +50,39 @@ extension ProfileViewController {
     }
     
     fileprivate func refreshData() {
-        let userVM = UserViewModel()
-        userVM.fetchLoggedInShopper { (result, error) in
+        fetchUserInfo()
+    }
+    
+    private func fetchUserInfo() {
+        showProgress(message: "Loading...")
+        viewModel.fetchLoggedInShopper { [weak self] (result, error) in
+            guard let strongSelf = self else {
+                return
+            }
+            
             if let _ = error {
-                self.showErrorToast(error!.localizedDescription)
+                strongSelf.showErrorToast(error)
             } else {
-                self.collectionView.reloadData()
+                // Fetch user interests after having user information
+                strongSelf.fetchUserInterests()
+                strongSelf.collectionView.reloadData()
             }
+            strongSelf.dismissProgress()
         }
-        userVM.fetchInterests { response, error in
-            if let _ = error {
-                self.showErrorToast(error!.localizedDescription)
-            } else if let interests = response?.results {
-                self.interests = interests
+    }
+    
+    private func fetchUserInterests() {
+        viewModel.fetchInterests { [weak self] response, error in
+            guard let strongSelf = self else {
+                return
             }
-            self.collectionView.reloadData()
+            
+            if let _ = error {
+                strongSelf.showErrorToast(error)
+            } else if let interests = response?.results {
+                strongSelf.interests = interests
+                strongSelf.collectionView.reloadData()
+            }
         }
     }
 }

@@ -46,7 +46,8 @@ extension BaseViewController {
         FTIndicator.dismissProgress()
     }
     
-    func showErrorToast(_ message: String) {
+    func showErrorToast(_ error: NSError?) {
+        let message = error?.localizedDescription ?? AppError.unexpected.localizedDescription
         FTIndicator.showError(withMessage: message)
     }
 }

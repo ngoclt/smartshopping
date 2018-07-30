@@ -14,14 +14,11 @@ class StoreDetailViewController: BaseViewController {
     static let NUMBER_ITEMS_PER_ROW: Int = 2
     static let PRODUCT_ITEM_HEIGHT: CGFloat = 170
     
-    @IBOutlet fileprivate var collectionView: UICollectionView! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet fileprivate var collectionView: UICollectionView!
     
     var store: Store!
     var products: [Product] = []
+    let viewModel = StoreViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +45,7 @@ extension StoreDetailViewController {
     }
     
     fileprivate func refreshData() {
-        let viewModel = StoreViewModel()
+        showProgress(message: "Loading")
         viewModel.fetchProduct(storeId: store.objectId) { [weak self] response, error in
             guard let strongSelf = self else {
                 return
@@ -58,8 +55,10 @@ extension StoreDetailViewController {
                 strongSelf.products = products
                 strongSelf.collectionView.reloadData()
             } else {
-                log.error(error)
+                strongSelf.showErrorToast(error)
             }
+            
+            strongSelf.dismissProgress()
         }
     }
 }

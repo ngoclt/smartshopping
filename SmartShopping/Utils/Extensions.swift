@@ -76,12 +76,23 @@ extension UITextField {
 }
 
 extension UIImageView {
-    func setImageURL(_ urlString: String) {
+    func setImageURL(_ urlString: String?) {
         let placeholder = UIImage(named: "ImagePlaceholder")
-        if let url = URL(string: urlString) {
+        if let string = urlString, let url = URL(string: string) {
             self.af_setImage(withURL: url, placeholderImage: placeholder)
         } else {
             self.image = placeholder
+        }
+    }
+}
+
+extension UIButton {
+    func setImageURL(_ urlString: String?) {
+        let placeholder = UIImage(named: "ImagePlaceholder")
+        if let string = urlString, let url = URL(string: string) {
+            self.af_setImage(for: .normal, url: url, placeholderImage: placeholder)
+        } else {
+            self.setImage(placeholder, for: .normal)
         }
     }
 }

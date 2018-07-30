@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppConstants {
-    
+    static let kUnExpectedErrorMessage = "Unexpected error."
 }
 
 struct AppError {
@@ -21,7 +21,7 @@ struct AppError {
                                     userInfo:[NSLocalizedDescriptionKey: "Please input correct login information."])
     static let unexpected = NSError(domain: kAppDomain,
                                     code: kAppErrorCode,
-                                    userInfo:[NSLocalizedDescriptionKey: "Unexpected error."])
+                                    userInfo:[NSLocalizedDescriptionKey: AppConstants.kUnExpectedErrorMessage])
     static func serverError(_ message: String) -> NSError {
         return NSError(domain: kAppDomain,
                        code: kAppErrorCode,

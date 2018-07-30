@@ -84,7 +84,7 @@ extension LoginViewController {
             }
             
             
-            weakSelf.showErrorToast(AppError.login.localizedDescription)
+            weakSelf.showErrorToast(AppError.login)
         }
     }
     

@@ -10,29 +10,21 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
     
-    @IBOutlet fileprivate var btnThumb: UIButton! {
+    @IBOutlet fileprivate var btnStore: UIButton! {
         didSet {
-            btnThumb.layer.cornerRadius = btnThumb.bounds.size.width/2
-            btnThumb.layer.masksToBounds = true
-            btnThumb.layer.borderWidth = 1.0
+            btnStore.layer.cornerRadius = btnStore.bounds.size.width/2
+            btnStore.layer.masksToBounds = true
+            btnStore.layer.borderWidth = 1.0
         }
     }
     
-    @IBOutlet fileprivate var btnCheck: UIButton! {
-        didSet {
-//            btnCheck.setImage(Icon.check?.tint(with: Color.orange.base), for: .normal)
-        }
-    }
+    @IBOutlet fileprivate var lblTitle: UILabel!
+    @IBOutlet fileprivate var lblDescription: UILabel!
+    @IBOutlet fileprivate var ivThumb: UIImageView!
     
-    @IBOutlet fileprivate var lblTitle: UILabel! {
+    var data: StoreNotification! {
         didSet {
-            
-        }
-    }
-    
-    @IBOutlet fileprivate var lblDescription: UILabel! {
-        didSet {
-            
+            reloadData()
         }
     }
     
@@ -40,11 +32,15 @@ class NotificationTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    @IBAction fileprivate func didTapBTNThumb(_ sender: UIButton) {
+    func reloadData() {
+        lblTitle.text = data.title
+        lblDescription.text = data.message
+        ivThumb.setImageURL(data.thumb)
         
+        btnStore.setImageURL(data.store?.imageCover)
     }
     
-    @IBAction fileprivate func didTapBTNCheck(_ sender: UIButton) {
+    @IBAction fileprivate func didTapBTNStore(_ sender: UIButton) {
         
     }
 }
