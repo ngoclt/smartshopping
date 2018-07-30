@@ -116,6 +116,11 @@
                                                         <constraint firstItem="RNJ-j2-aWq" firstAttribute="leading" secondItem="y6G-SX-8Bn" secondAttribute="leading" constant="10" id="VSZ-ZE-JeJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="qM9-Aa-TKU" secondAttribute="trailing" id="vgs-W4-Z1f"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -700,7 +705,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="141" id="K74-9j-A4A" customClass="NotificationTableViewCell" customModule="SmartShopping" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="141" id="K74-9j-A4A" customClass="NotificationTableViewCell" customModule="SmartShopping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K74-9j-A4A" id="dOf-uh-UZh">
@@ -731,7 +736,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKj-MV-BGm">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKj-MV-BGm">
                                                     <rect key="frame" x="245" y="51" width="120" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="H24-vk-1Ig"/>
@@ -942,6 +947,11 @@
                                                         <constraint firstItem="LqN-DF-39V" firstAttribute="top" secondItem="fhA-Lr-1M8" secondAttribute="top" id="oEB-Kz-UmS"/>
                                                         <constraint firstItem="1lw-gr-f4i" firstAttribute="leading" secondItem="fhA-Lr-1M8" secondAttribute="leading" constant="10" id="yJ0-T8-du7"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

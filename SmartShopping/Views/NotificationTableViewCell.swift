@@ -15,12 +15,18 @@ class NotificationTableViewCell: UITableViewCell {
             btnStore.layer.cornerRadius = btnStore.bounds.size.width/2
             btnStore.layer.masksToBounds = true
             btnStore.layer.borderWidth = 1.0
+            btnStore.layer.borderColor = UIColor.white.cgColor
         }
     }
     
     @IBOutlet fileprivate var lblTitle: UILabel!
     @IBOutlet fileprivate var lblDescription: UILabel!
-    @IBOutlet fileprivate var ivThumb: UIImageView!
+    @IBOutlet fileprivate var ivThumb: UIImageView! {
+        didSet {
+            ivThumb.layer.cornerRadius = 5
+            ivThumb.layer.masksToBounds = true
+        }
+    }
     
     var data: StoreNotification! {
         didSet {
