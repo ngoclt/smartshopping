@@ -11,12 +11,12 @@ import ObjectMapper
 
 class Beacon: Mappable {
 
-    var objectId: String
+    var objectId: Int64
     var name: String
     var beaconId: String
     
     init() {
-        self.objectId = ""
+        self.objectId = 0
         self.name = ""
         self.beaconId = ""
     }

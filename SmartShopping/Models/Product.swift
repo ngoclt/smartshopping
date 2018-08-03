@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Product: Mappable {
     
-    var objectId: String
+    var objectId: Int64
     var name: String
     var description: String
     var brand: String
@@ -22,7 +22,7 @@ class Product: Mappable {
     var isLiked: Bool
     
     init() {
-        self.objectId = ""
+        self.objectId = 0
         self.name = ""
         self.description = ""
         self.image = ""

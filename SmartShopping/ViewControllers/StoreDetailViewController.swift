@@ -14,11 +14,14 @@ class StoreDetailViewController: BaseViewController {
     static let NUMBER_ITEMS_PER_ROW: Int = 2
     static let PRODUCT_ITEM_HEIGHT: CGFloat = 170
     
-    @IBOutlet fileprivate var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
     var store: Store!
     var products: [Product] = []
+    var categories: [Category] = []
     let viewModel = StoreViewModel()
+    
+    var selectedFilter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +47,13 @@ extension StoreDetailViewController {
         collectionViewLayout.minimumInteritemSpacing = StoreDetailViewController.PRODUCT_ITEM_MARGIN
     }
     
-    fileprivate func refreshData() {
-        showProgress(message: "Loading")
-        viewModel.fetchProduct(storeId: store.objectId) { [weak self] response, error in
+    fileprivate func fetchProducts() {
+        var categoryId: Int64 = 0
+        if selectedFilter > 0 {
+            let category = categories[selectedFilter - 1]
+            categoryId = category.objectId
+        }
+        viewModel.fetchProduct(storeId: store.objectId, categoryId: categoryId) { [weak self] response, error in
             guard let strongSelf = self else {
                 return
             }
@@ -57,9 +64,26 @@ extension StoreDetailViewController {
             } else {
                 strongSelf.showErrorToast(error)
             }
-            
-            strongSelf.dismissProgress()
         }
+    }
+    
+    fileprivate func fetchCategories() {
+        viewModel.fetchCategory(storeId: store.objectId) { [weak self] response, error in
+            guard let strongSelf = self else {
+                return
+            }
+            if let categories = response?.results {
+                strongSelf.categories = categories
+                strongSelf.collectionView.reloadData()
+            } else {
+                strongSelf.showErrorToast(error)
+            }
+        }
+    }
+    
+    fileprivate func refreshData() {
+        fetchCategories()
+        fetchProducts()
     }
 }
 
@@ -74,11 +98,26 @@ extension StoreDetailViewController: UICollectionViewDataSource {
         cell.data = products[indexPath.item]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "StoreCategoryFilterView", for: indexPath) as! StoreCategoryFilterView
+        view.reloadData(categories, filter: selectedFilter)
+        view.delegate = self
+        return view
+    }
 }
 
 extension StoreDetailViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension StoreDetailViewController: StoreCategoryFilterViewDelegate {
+    
+    func didSelectCategoryFilter(_ index: Int) {
+        selectedFilter = index
+        fetchProducts()
     }
 }

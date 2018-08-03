@@ -26,6 +26,7 @@
 		4C25F1B82102293B009FE425 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1B72102293B009FE425 /* NotificationViewModel.swift */; };
 		4C2C1448210F01630004198E /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C1447210F01630004198E /* Beacon.swift */; };
 		4C2C144A210F267B0004198E /* VerticalTopAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C1449210F267B0004198E /* VerticalTopAlignLabel.swift */; };
+		4C2C144C210F49A50004198E /* HorizontalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C144B210F49A50004198E /* HorizontalMenuView.swift */; };
 		4C3273D720E40AC0008A0F0E /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CB20E40ABF008A0F0E /* Roboto-LightItalic.ttf */; };
 		4C3273D820E40AC0008A0F0E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CC20E40ABF008A0F0E /* Roboto-Bold.ttf */; };
 		4C3273D920E40AC0008A0F0E /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3273CD20E40ABF008A0F0E /* Roboto-Italic.ttf */; };
@@ -56,6 +57,7 @@
 		4C7DB4581FC8783C006D0810 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */; };
 		4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */; };
 		4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */; };
+		4C866BDC2113252E002179DA /* StoreCategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C866BDB2113252D002179DA /* StoreCategoryFilterView.swift */; };
 		4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91298B20FE07A400CD48D4 /* SignupViewController.swift */; };
 		4C91298E20FE20A600CD48D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91298D20FE20A600CD48D4 /* UserViewModel.swift */; };
 		4C97B87720CD803500D681F9 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */; };
@@ -117,6 +119,7 @@
 		4C25F1B72102293B009FE425 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		4C2C1447210F01630004198E /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		4C2C1449210F267B0004198E /* VerticalTopAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTopAlignLabel.swift; sourceTree = "<group>"; };
+		4C2C144B210F49A50004198E /* HorizontalMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMenuView.swift; sourceTree = "<group>"; };
 		4C3273CB20E40ABF008A0F0E /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		4C3273CC20E40ABF008A0F0E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		4C3273CD20E40ABF008A0F0E /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		4C7DB4571FC8783C006D0810 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C866BDB2113252D002179DA /* StoreCategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategoryFilterView.swift; sourceTree = "<group>"; };
 		4C91298B20FE07A400CD48D4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C91298D20FE20A600CD48D4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 				4CDB560020F8E16E007633F9 /* InterestCollectionViewCell.swift */,
 				4CDB560220F90EF9007633F9 /* UnderlineTextField.swift */,
 				4C2C1449210F267B0004198E /* VerticalTopAlignLabel.swift */,
+				4C2C144B210F49A50004198E /* HorizontalMenuView.swift */,
+				4C866BDB2113252D002179DA /* StoreCategoryFilterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -634,6 +640,7 @@
 				4C45712120DAABDF00104F35 /* APICall.swift in Sources */,
 				4C3273E420E40C33008A0F0E /* AppearanceManager.swift in Sources */,
 				4C40A88220DAB32100962C28 /* StoreNotification.swift in Sources */,
+				4C866BDC2113252E002179DA /* StoreCategoryFilterView.swift in Sources */,
 				4C97B87720CD803500D681F9 /* StoreDetailViewController.swift in Sources */,
 				4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */,
 				4C0D6A2B1FC8090400E25DFD /* StoreListViewController.swift in Sources */,
@@ -657,6 +664,7 @@
 				4C40A88020DAB31600962C28 /* Product.swift in Sources */,
 				4C6D402D20E66DD900432BD0 /* DesignableView.swift in Sources */,
 				4C91298E20FE20A600CD48D4 /* UserViewModel.swift in Sources */,
+				4C2C144C210F49A50004198E /* HorizontalMenuView.swift in Sources */,
 				4C2451BF20EE95930030DA97 /* RoundedImageView.swift in Sources */,
 				4C2C144A210F267B0004198E /* VerticalTopAlignLabel.swift in Sources */,
 				4C25F1B02100ED86009FE425 /* Constants.swift in Sources */,

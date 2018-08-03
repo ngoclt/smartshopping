@@ -16,6 +16,22 @@ extension Data {
     }
 }
 
+extension UIView {
+    func addConstrainToFill(top: CGFloat, left: CGFloat, right: CGFloat, bottom: CGFloat) {
+        guard let parent = superview else {
+            return
+        }
+        
+        leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: left).isActive = true
+        trailingAnchor.constraint(equalTo: parent.trailingAnchor, constant: right).isActive = true
+        topAnchor.constraint(equalTo: parent.topAnchor, constant: top).isActive = true
+        bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: bottom).isActive = true
+    }
+    
+    func addConstrainToFillParent(_ margin: CGFloat = 0) {
+        addConstrainToFill(top: margin, left: margin, right: margin, bottom: margin)
+    }
+}
 
 extension UIColor {
     /**

@@ -24,6 +24,10 @@ struct APIPath {
     static func storeProduct(id: Int64) -> String {
         return "stores/\(id)/products/"
     }
+    
+    static func storeCategories(id: Int64) -> String {
+        return "stores/\(id)/categories/"
+    }
 }
 
 struct Endpoint {
@@ -33,7 +37,7 @@ struct Endpoint {
     var url: String
     var method: HTTPMethod
     var params: [String: Any]?
-    var encoding: ParameterEncoding
+    var encoding: ParameterEncoding = JSONEncoding.default
     
     init(path: String,
          method: HTTPMethod,

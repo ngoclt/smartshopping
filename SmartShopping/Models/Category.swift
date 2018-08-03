@@ -11,14 +11,14 @@ import ObjectMapper
 
 class Category: Mappable {
     
-    var objectId: String
+    var objectId: Int64
     var name: String
     var description: String
     var thumbnail: String
     var isLiked: Bool
     
     init() {
-        self.objectId = ""
+        self.objectId = 0
         self.name = ""
         self.description = ""
         self.thumbnail = ""

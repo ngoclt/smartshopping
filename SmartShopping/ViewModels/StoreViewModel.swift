@@ -26,8 +26,12 @@ class StoreViewModel {
         
     }
     
-    func fetchProduct(storeId: Int64, callback: @escaping (ResponseList<Product>?, NSError?) -> Void) {
-        let endpoint = Endpoint(path: APIPath.storeProduct(id: storeId), method: .get)
+    func fetchProduct(storeId: Int64, categoryId: Int64 = 0, callback: @escaping (ResponseList<Product>?, NSError?) -> Void) {
+        
+        var endpoint = Endpoint(path: APIPath.storeProduct(id: storeId), method: .get)
+        if categoryId > 0 {
+            endpoint.params = ["category": categoryId]
+        }
         
         let call = APICall(endpoint)
         call.requestObject(type: ResponseList<Product>.self) { result, error in
@@ -35,7 +39,12 @@ class StoreViewModel {
         }
     }
     
-    func fetchCategory(storeId: String, callback: @escaping (ResponseList<Category>?, NSError?) -> Void) {
+    func fetchCategory(storeId: Int64, callback: @escaping (ResponseList<Category>?, NSError?) -> Void) {
+        let endpoint = Endpoint(path: APIPath.storeCategories(id: storeId), method: .get)
         
+        let call = APICall(endpoint)
+        call.requestObject(type: ResponseList<Category>.self) { result, error in
+            callback(result, error)
+        }
     }
 }

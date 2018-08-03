@@ -11,7 +11,7 @@ import ObjectMapper
 
 class StoreNotification: Mappable {
     
-    var objectId: String
+    var objectId: Int64
     var title: String
     var message: String
     var beacons: [Beacon]
@@ -33,7 +33,7 @@ class StoreNotification: Mappable {
     }
     
     init() {
-        self.objectId = ""
+        self.objectId = 0
         self.title = ""
         self.message = ""
         self.beacons = []
