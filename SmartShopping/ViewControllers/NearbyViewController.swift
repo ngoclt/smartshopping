@@ -50,31 +50,27 @@ class NearbyViewController: BaseViewController {
 extension NearbyViewController {
     func refreshData() {
         showProgress(message: "Loading...")
-        viewModel.fetchList { [weak self] response, error in
-            guard let strongSelf = self else {
-                return
-            }
-            
-            if let stores = response?.results {
-                strongSelf.dataSourceItems = stores
-            } else {
-                strongSelf.showErrorToast(error)
-            }
-            
-            strongSelf.dismissProgress()
-        }
+        
     }
 }
 
 extension NearbyViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSourceItems.count
+        if dataSourceItems.count > 0 {
+            return dataSourceItems.count
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
-        cell.data = dataSourceItems[indexPath.row]
+        if dataSourceItems.count > 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
+            cell.data = dataSourceItems[indexPath.row]
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoStoreTableViewCell", for: indexPath) as! NoStoreTableViewCell
         return cell
     }
 }

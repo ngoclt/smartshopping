@@ -6,4 +6,12 @@
 //  Copyright © 2018 Ngoc LE. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class NoStoreTableViewCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+}
