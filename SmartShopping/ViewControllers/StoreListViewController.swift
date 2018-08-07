@@ -49,7 +49,7 @@ class StoreListViewController: BaseViewController {
 
 extension StoreListViewController {
     func refreshData() {
-        showProgress(message: "Loading")
+        showProgress(message: "Loading...")
         
         viewModel.fetchList { [weak self] response, error in
             guard let strongSelf = self else {

@@ -21,6 +21,8 @@ class NotificationViewController: BaseViewController {
         }
     }
     
+    var selectedNotification: StoreNotification?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,15 +37,24 @@ class NotificationViewController: BaseViewController {
         refreshData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? StoreDetailViewController,
+            let notification = selectedNotification, let store = notification.store else {
+                return
+        }
+        
+        viewController.store = store
+        if let category = notification.category {
+            viewController.selectedCategoryId = category.objectId
+        } else if let product = notification.product {
+            viewController.selectedProductId = product.objectId
+        }
     }
 }
 
 extension NotificationViewController {
     func refreshData() {
-        showProgress(message: "Loading")
+        showProgress(message: "Loading...")
         
         viewModel.fetchUserNotifications { [weak self] response, error in
             guard let strongSelf = self else {
@@ -76,12 +87,13 @@ extension NotificationViewController: UITableViewDataSource {
 extension NotificationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        selectedNotification = dataSourceItems[indexPath.item]
+        performSegue(withIdentifier: "OpenStoreDetailFromNotification", sender: self)
     }
 }
 
 extension NotificationViewController {
     @IBAction fileprivate func didTapBTNLogin(_ sender: UIButton) {
-        log.info("Login from Notification")
         tabBarController?.performSegue(withIdentifier: "OpenLogin", sender: self)
     }
 }

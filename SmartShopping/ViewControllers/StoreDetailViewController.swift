@@ -22,6 +22,8 @@ class StoreDetailViewController: BaseViewController {
     let viewModel = StoreViewModel()
     
     var selectedFilter = 0
+    var selectedCategoryId: Int64 = 0
+    var selectedProductId: Int64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +50,16 @@ extension StoreDetailViewController {
     }
     
     fileprivate func fetchProducts() {
-        var categoryId: Int64 = 0
+        
         if selectedFilter > 0 {
             let category = categories[selectedFilter - 1]
-            categoryId = category.objectId
+            selectedCategoryId = category.objectId
+            
+        } else {
+            selectedCategoryId = 0
         }
-        viewModel.fetchProduct(storeId: store.objectId, categoryId: categoryId) { [weak self] response, error in
+
+        viewModel.fetchProduct(storeId: store.objectId, categoryId: selectedCategoryId) { [weak self] response, error in
             guard let strongSelf = self else {
                 return
             }
@@ -68,13 +74,21 @@ extension StoreDetailViewController {
     }
     
     fileprivate func fetchCategories() {
+        showProgress(message: "Loading...")
         viewModel.fetchCategory(storeId: store.objectId) { [weak self] response, error in
             guard let strongSelf = self else {
                 return
             }
+            strongSelf.dismissProgress()
             if let categories = response?.results {
                 strongSelf.categories = categories
+                if let filter = categories.index(where: { $0.objectId == strongSelf.selectedCategoryId }) {
+                    strongSelf.selectedFilter = filter + 1
+                }
+                
                 strongSelf.collectionView.reloadData()
+                
+                strongSelf.fetchProducts()
             } else {
                 strongSelf.showErrorToast(error)
             }
@@ -83,7 +97,6 @@ extension StoreDetailViewController {
     
     fileprivate func refreshData() {
         fetchCategories()
-        fetchProducts()
     }
 }
 
