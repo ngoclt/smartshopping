@@ -25,11 +25,17 @@ class NearbyViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         title = "Nearby"
+        registerBeaconNotification()
+        EstimoteManager.shared.startObserving()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        refreshData()
+        tableView.reloadData()
+    }
+    
+    deinit {
+        unregisterBeaconNotification()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,9 +54,46 @@ class NearbyViewController: BaseViewController {
 }
 
 extension NearbyViewController {
-    func refreshData() {
-        showProgress(message: "Loading...")
+    func registerBeaconNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(onEnter(notification:)),
+                                               name: Notification.Name.onEnterNewZone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onExit(notification:)),
+                                               name: Notification.Name.onEnterNewZone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onEnter(notification:)),
+                                               name: Notification.Name.onEnterNewZone, object: nil)
+    }
+    
+    func unregisterBeaconNotification() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func onEnter(notification: Notification) {
+        guard let nearbyBeacon = notification.object as? NearbyBeacon else {
+            return
+        }
         
+        fetchBeaconInfo(beaconId: nearbyBeacon.identifier)
+    }
+    
+    @objc func onExit(notification: Notification) {
+        
+    }
+    
+    @objc func onChange(notification: Notification) {
+        
+    }
+    
+    func fetchBeaconInfo(beaconId: String) {
+        viewModel.fetchBeacon(beaconId) { beacon, error in
+            if let storeBeacon = beacon, let store = storeBeacon.store {
+                if self.dataSourceItems.contains(where: { $0.objectId == store.objectId }) {
+                    return
+                }
+                
+                self.dataSourceItems.append(store)
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 

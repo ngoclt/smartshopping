@@ -28,6 +28,10 @@ struct APIPath {
     static func storeCategories(id: Int64) -> String {
         return "stores/\(id)/categories/"
     }
+    
+    static func beacon(id: String) -> String {
+        return "beacons/\(id)/"
+    }
 }
 
 struct Endpoint {

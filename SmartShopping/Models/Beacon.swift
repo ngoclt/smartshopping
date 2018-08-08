@@ -15,6 +15,9 @@ class Beacon: Mappable {
     var name: String
     var beaconId: String
     
+    var store: Store?
+    var notifications: [StoreNotification]?
+    
     init() {
         self.objectId = 0
         self.name = ""
@@ -23,12 +26,14 @@ class Beacon: Mappable {
     
     required convenience init?(map: Map) {
         self.init()
-        
     }
     
     func mapping(map: Map) {
         objectId <- map["id"]
         name <- map["name"]
         beaconId <- map["beacon_id"]
+        
+        store <- map["store"]
+        notifications <- map["notifications"]
     }
 }

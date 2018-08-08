@@ -10,9 +10,10 @@ target 'SmartShopping' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage'
-    pod 'EstimoteSDK'
+    pod 'EstimoteProximitySDK'
     pod 'SwiftyBeaver'
     pod 'FTIndicator'
+    pod 'Firebase/Core'
     
     target 'SmartShoppingTests' do
         inherit! :search_paths

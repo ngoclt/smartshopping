@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyBeaver
+import Firebase
 
 let log = SwiftyBeaver.self
 
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         
         // add log destinations. at least one is needed!
         let console = ConsoleDestination()  // log to Xcode Console
@@ -36,16 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppearanceManager.configureNavigationBar()
         AppearanceManager.configureTabBar()
-        
-        ESTConfig.setupAppID("smart-shopping-fys", andAppToken: "312f109fe4656098fc18b1ceccba96ae")
-        
-        /** TODO: Make sure your beacons have Estimote Monitoring feature set enabled:
-         https://community.estimote.com/hc/en-us/articles/226144728
-         */
-        
-//        self.notificationManager.enableNotifications(deviceIdentifier: "eaff786a6a8a3a53c0136916842be606",
-//                                                     enterMessage: "Hello, world! ✌️",
-//                                                     exitMessage: "Goodbye! 👋")
         
         return true
     }

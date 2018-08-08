@@ -47,4 +47,13 @@ class StoreViewModel {
             callback(result, error)
         }
     }
+    
+    func fetchBeacon(_ beaconId: String, callback: @escaping (Beacon?, NSError?) -> Void) {
+        let endpoint = Endpoint(path: APIPath.beacon(id: beaconId), method: .get)
+        
+        let call = APICall(endpoint)
+        call.requestObject(type: Beacon.self) { result, error in
+            callback(result, error)
+        }
+    }
 }

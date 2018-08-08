@@ -19,6 +19,7 @@
 		4C0D6A591FC809D000E25DFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A581FC809D000E25DFD /* BaseViewController.swift */; };
 		4C0D6A5B1FC8112700E25DFD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */; };
 		4C139EE82119A23700E74713 /* NoStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C139EE72119A23700E74713 /* NoStoreTableViewCell.swift */; };
+		4C139EEA2119BFE700E74713 /* EstimoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C139EE92119BFE700E74713 /* EstimoteManager.swift */; };
 		4C2451BF20EE95930030DA97 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2451BE20EE95930030DA97 /* RoundedImageView.swift */; };
 		4C25F1B02100ED86009FE425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1AF2100ED86009FE425 /* Constants.swift */; };
 		4C25F1B2210103FE009FE425 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C25F1B1210103FE009FE425 /* OnboardingViewController.swift */; };
@@ -59,6 +60,7 @@
 		4C7DB4621FC8B25F006D0810 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */; };
 		4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */; };
 		4C866BDC2113252E002179DA /* StoreCategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C866BDB2113252D002179DA /* StoreCategoryFilterView.swift */; };
+		4C866BE021146273002179DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C866BDF21146273002179DA /* GoogleService-Info.plist */; };
 		4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91298B20FE07A400CD48D4 /* SignupViewController.swift */; };
 		4C91298E20FE20A600CD48D4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91298D20FE20A600CD48D4 /* UserViewModel.swift */; };
 		4C97B87720CD803500D681F9 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */; };
@@ -113,6 +115,7 @@
 		4C0D6A581FC809D000E25DFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C0D6A5A1FC8112700E25DFD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		4C139EE72119A23700E74713 /* NoStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoStoreTableViewCell.swift; sourceTree = "<group>"; };
+		4C139EE92119BFE700E74713 /* EstimoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimoteManager.swift; sourceTree = "<group>"; };
 		4C2451BE20EE95930030DA97 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		4C25F1AF2100ED86009FE425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C25F1B1210103FE009FE425 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		4C3273D620E40AC0008A0F0E /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		4C3273E320E40C33008A0F0E /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		4C3273E520E42804008A0F0E /* FontAwesomeSolid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesomeSolid.otf; sourceTree = "<group>"; };
+		4C3AB5FE211B165B00C5A824 /* SmartShopping.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartShopping.entitlements; sourceTree = "<group>"; };
 		4C40A87B20DAB2FF00962C28 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		4C40A87D20DAB30D00962C28 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4C40A87F20DAB31600962C28 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -145,7 +149,6 @@
 		4C45711520DA753800104F35 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4C45711720DA776700104F35 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		4C45712020DAABDF00104F35 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
-		4C54532A1FC96B8D00A25ED1 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		4C54532B1FCB086E00A25ED1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C6D402C20E66DD900432BD0 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		4C7DB4531FC877DB006D0810 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		4C7DB4611FC8B25F006D0810 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		4C7DB4631FC8B689006D0810 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C866BDB2113252D002179DA /* StoreCategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategoryFilterView.swift; sourceTree = "<group>"; };
+		4C866BDF21146273002179DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C91298B20FE07A400CD48D4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4C91298D20FE20A600CD48D4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4C97B87620CD803500D681F9 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		4C0D6A271FC8090400E25DFD /* SmartShopping */ = {
 			isa = PBXGroup;
 			children = (
+				4C3AB5FE211B165B00C5A824 /* SmartShopping.entitlements */,
 				4C3273C920E40A8C008A0F0E /* Resources */,
 				4C40A87A20DAB2EC00962C28 /* Models */,
 				4C40A87920DAB2DE00962C28 /* ViewModels */,
@@ -237,8 +242,8 @@
 				4C0D6A2C1FC8090400E25DFD /* Main.storyboard */,
 				4C0D6A2F1FC8090400E25DFD /* Assets.xcassets */,
 				4C0D6A311FC8090400E25DFD /* LaunchScreen.storyboard */,
+				4C866BDF21146273002179DA /* GoogleService-Info.plist */,
 				4C0D6A341FC8090400E25DFD /* Info.plist */,
-				4C54532A1FC96B8D00A25ED1 /* ObjCBridge.h */,
 			);
 			path = SmartShopping;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				4C45712020DAABDF00104F35 /* APICall.swift */,
 				4C3273E320E40C33008A0F0E /* AppearanceManager.swift */,
 				4C25F1AF2100ED86009FE425 /* Constants.swift */,
+				4C139EE92119BFE700E74713 /* EstimoteManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -464,6 +470,11 @@
 					4C0D6A241FC8090400E25DFD = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					4C0D6A381FC8090400E25DFD = {
 						CreatedOnToolsVersion = 9.0;
@@ -514,6 +525,7 @@
 				4C3273D720E40AC0008A0F0E /* Roboto-LightItalic.ttf in Resources */,
 				4C3273DF20E40AC0008A0F0E /* Roboto-Light.ttf in Resources */,
 				4C3273D920E40AC0008A0F0E /* Roboto-Italic.ttf in Resources */,
+				4C866BE021146273002179DA /* GoogleService-Info.plist in Resources */,
 				4C3273E120E40AC0008A0F0E /* Roboto-Regular.ttf in Resources */,
 				4C3273E620E42807008A0F0E /* FontAwesomeSolid.otf in Resources */,
 				4C3273DA20E40AC0008A0F0E /* Roboto-Black.ttf in Resources */,
@@ -584,18 +596,26 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
+				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
 				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -662,6 +682,7 @@
 				4C7DB4641FC8B689006D0810 /* PromotionCollectionViewCell.swift in Sources */,
 				4C25F1B621011EA7009FE425 /* Likable.swift in Sources */,
 				4C91298C20FE07A400CD48D4 /* SignupViewController.swift in Sources */,
+				4C139EEA2119BFE700E74713 /* EstimoteManager.swift in Sources */,
 				4C7DB4541FC877DB006D0810 /* ProductCollectionViewCell.swift in Sources */,
 				4CF8A35B20F4AA880002BA82 /* NearbyViewController.swift in Sources */,
 				4C25F1B2210103FE009FE425 /* OnboardingViewController.swift in Sources */,
@@ -842,6 +863,7 @@
 			baseConfigurationReference = D6EDE2989D18C31507E8A4AC /* Pods-SmartShopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartShopping/SmartShopping.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
@@ -850,7 +872,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -861,6 +883,7 @@
 			baseConfigurationReference = B4F8DCAEB994FF77FBC68137 /* Pods-SmartShopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartShopping/SmartShopping.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVKPWWHTCM;
@@ -869,7 +892,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = life.coder.SSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

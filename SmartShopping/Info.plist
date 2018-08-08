@@ -4,11 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
+	<key>CFBundleDisplayName</key>
+	<string>S Smart </string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,8 +14,6 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
-	<key>CFBundleDisplayName</key>
-	<string>S Smart </string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,28 +22,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot;, so as to  fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
+	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option, we can also alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot;, so as to  fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot;, so as to  fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
+	<string>We&apos;ll show you cool things near you in the app, and alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot;, so as to  fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
+	<string>We&apos;ll show you cool things near you in the app.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>FontAwesomeSolid.otf</string>
@@ -65,6 +49,23 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-ThinItalic.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>fetch</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
