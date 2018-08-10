@@ -12,14 +12,10 @@ class NearbyViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    fileprivate var selectedStore: Store?
+    fileprivate var selectedBeacon: Beacon?
     
     let viewModel = StoreViewModel()
-    var dataSourceItems: [Store] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var dataSourceItems: [Beacon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +27,7 @@ class NearbyViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        fetchBeaconInfo(beaconId: "eaff786a6a8a3a53c0136916842be606")
     }
     
     deinit {
@@ -44,12 +40,19 @@ class NearbyViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? StoreDetailViewController,
-            let store = selectedStore else {
+        if let viewController = segue.destination as? StoreDetailViewController,
+            let store = selectedBeacon?.store {
+                viewController.store = store
                 return
         }
         
-        viewController.store = store
+        if let viewController = segue.destination as? NotificationViewController,
+            let beacon = selectedBeacon, let notifications = selectedBeacon?.notifications {
+            viewController.beacon = beacon
+            viewController.dataSourceItems = notifications
+            return
+        }
+        
     }
 }
 
@@ -85,12 +88,14 @@ extension NearbyViewController {
     
     func fetchBeaconInfo(beaconId: String) {
         viewModel.fetchBeacon(beaconId) { beacon, error in
-            if let storeBeacon = beacon, let store = storeBeacon.store {
-                if self.dataSourceItems.contains(where: { $0.objectId == store.objectId }) {
+            if let _ = error {}
+            
+            if let storeBeacon = beacon {
+                if self.dataSourceItems.contains(where: { $0.beaconId == storeBeacon.beaconId }) {
                     return
                 }
                 
-                self.dataSourceItems.append(store)
+                self.dataSourceItems.append(storeBeacon)
                 self.tableView.reloadData()
             }
         }
@@ -109,7 +114,7 @@ extension NearbyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if dataSourceItems.count > 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
-            cell.data = dataSourceItems[indexPath.row]
+            cell.data = dataSourceItems[indexPath.row].store
             return cell
         }
         
@@ -120,7 +125,7 @@ extension NearbyViewController: UITableViewDataSource {
 
 extension NearbyViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedStore = dataSourceItems[indexPath.row]
-        self.performSegue(withIdentifier: "OpenStoreDetailFromNearby", sender: self)
+        selectedBeacon = dataSourceItems[indexPath.row]
+        self.performSegue(withIdentifier: "OpenStoreNotification", sender: self)
     }
 }

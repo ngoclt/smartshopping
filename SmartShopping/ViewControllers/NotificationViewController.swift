@@ -13,20 +13,22 @@ class NotificationViewController: BaseViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var beacon: Beacon?
+    
     let viewModel = NotificationViewModel()
     
-    var dataSourceItems: [StoreNotification] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var dataSourceItems: [StoreNotification] = []
     
     var selectedNotification: StoreNotification?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        title = "Notifications"
+        if let storeBeacon = beacon, let store = storeBeacon.store {
+            title = "\(store.name) Notifications"
+        } else {
+            title = "Notifications"
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +55,16 @@ class NotificationViewController: BaseViewController {
 }
 
 extension NotificationViewController {
+    
     func refreshData() {
+        if let _ = beacon {
+            fetStoreNotifications()
+        } else {
+            fetchUserNotifications()
+        }
+    }
+    
+    func fetchUserNotifications() {
         showProgress(message: "Loading...")
         
         viewModel.fetchUserNotifications { [weak self] response, error in
@@ -63,12 +74,17 @@ extension NotificationViewController {
             
             if let stores = response?.results {
                 strongSelf.dataSourceItems = stores
+                strongSelf.tableView.reloadData()
             } else {
                 strongSelf.showErrorToast(error)
             }
             
             strongSelf.dismissProgress()
         }
+    }
+    
+    func fetStoreNotifications() {
+        //TODO: Need to implement an API to get all store's notifications
     }
 }
 
