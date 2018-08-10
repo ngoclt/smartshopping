@@ -15,17 +15,17 @@ class InterestCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var btnLike: UIButton!
     
     var interestId: Int64 = 0
-    var item: Likable! {
-        didSet {
-            lblTitle.text = item.title()
-            ivThumb.setImageURL(item.imageThumbnail())
-            
-            let color = item.status() ? Color.liked : Color.unliked
-            btnLike.setTitleColor(color.value, for: .normal)
-        }
-    }
+    var item: Likable!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func reloadData() {
+        lblTitle.text = item.title()
+        ivThumb.setImageURL(item.imageThumbnail())
+        
+        let color = item.status() ? Color.liked : Color.unliked
+        btnLike.setTitleColor(color.value, for: .normal)
     }
 }

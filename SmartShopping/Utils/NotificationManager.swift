@@ -5,19 +5,19 @@
 import UIKit
 import UserNotifications
 
-extension NotificationManager {
-    fileprivate struct Parameters {
-        
-        /// Desired distance from a beacon from which enter/exit events should be triggered, in meters.
-        static let desiredZoneRadius = 2.0
-    }
-}
-
 class NotificationManager: NSObject {
     
-    internal func enableNotifications(deviceIdentifier: String) {
+    static let shared = NotificationManager()
+    
+    private override init() {
+        super.init()
+    }
+    
+    func enableNotifications() {
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             guard error == nil else {
                 //Display Error.. Handle Error.. etc..
@@ -36,26 +36,23 @@ class NotificationManager: NSObject {
         UIApplication.shared.registerForRemoteNotifications()
     }
     
-    fileprivate func presentNotification(message: String?) {
-        guard let body = message else {
-            return
-        }
-        
+    
+    
+    fileprivate func presentNotification(title: String, message: String) {
+        let notificationCenter = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        content.title = "Smart Shopping"
-        content.body = body
+        content.title = title
+        content.body = message
         content.sound = UNNotificationSound.default()
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: false)
-        
-        let identifier = "SSLocalNotification"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if (error != nil) {
-                print(error!)
-            } else {
-                print("Success! ID:\(identifier), Message:\(body), Time:\(trigger.timeInterval.magnitude) seconds")
-            }
-        }
+        let request = UNNotificationRequest(identifier: "exit", content: content, trigger: nil)
+        notificationCenter.add(request, withCompletionHandler: nil)
+    }
+}
+
+extension NotificationManager: UNUserNotificationCenterDelegate {
+    
+    // Needs to be implemented to receive notifications both in foreground and background
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([UNNotificationPresentationOptions.alert, UNNotificationPresentationOptions.sound])
     }
 }

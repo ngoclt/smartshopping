@@ -50,4 +50,12 @@ extension BaseViewController {
         let message = error?.localizedDescription ?? AppError.unexpected.localizedDescription
         FTIndicator.showError(withMessage: message)
     }
+    
+    func showNotification(title: String, message: String) {
+        FTIndicator.showNotification(withTitle: title, message: message)
+    }
+    
+    func dismissNotification() {
+        FTIndicator.dismissNotification()
+    }
 }

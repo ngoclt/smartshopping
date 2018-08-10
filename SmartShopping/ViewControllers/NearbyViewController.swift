@@ -97,6 +97,8 @@ extension NearbyViewController {
                 
                 self.dataSourceItems.append(storeBeacon)
                 self.tableView.reloadData()
+                
+                self.showNotification(title: storeBeacon.store!.name, message: "You are close to \(storeBeacon.store!.name). Let's have a look at their new sale notifications.")
             }
         }
     }

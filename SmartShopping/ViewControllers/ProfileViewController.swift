@@ -101,6 +101,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         } else if let category = interest.category {
             cell.item = category
         }
+        cell.reloadData()
         return cell
     }
 }
